@@ -1,0 +1,1524 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Menu — Espace Festicas Ibelina · Restaurant à Banfora</title>
+
+<meta name="description" content="Découvrez le menu complet de l'Espace Festicas Ibelina : plats burkinabè traditionnels, grillades, boissons, sucreries. Restaurant à Banfora, Burkina Faso.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://espacefesticasibelina.com/menu.html">
+
+<meta property="og:type" content="restaurant">
+<meta property="og:title" content="Menu — Espace Festicas Ibelina">
+<meta property="og:description" content="Plats traditionnels burkinabè, grillades et boissons.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<style>
+:root{
+  --vert:#7DB93F;
+  --vert-fonce:#5E9630;
+  --vert-clair:#E8F3DC;
+  --jaune:#F5B335;
+  --jaune-fonce:#D9961A;
+  --jaune-clair:#FDF4DE;
+  --bleu:#1E88C7;
+  --bleu-fonce:#0F5A8A;
+  --bleu-clair:#E1F1FA;
+  --sable:#FAF7F0;
+  --brun:#3E2F1C;
+  --texte:#2B2A26;
+  --texte-doux:#6B6760;
+  --bordure:#E5E0D6;
+  --blanc:#FFFFFF;
+  --ombre-douce:0 4px 24px rgba(62,47,28,.08);
+  --ombre-moyenne:0 12px 40px rgba(62,47,28,.12);
+  --ombre-forte:0 24px 60px rgba(62,47,28,.18);
+  --radius:14px;
+  --radius-lg:22px;
+  --transition:.35s cubic-bezier(.4,0,.2,1);
+}
+
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Plus Jakarta Sans',system-ui,-apple-system,sans-serif;
+  font-size:16px;line-height:1.65;color:var(--texte);
+  background:var(--sable);
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+img{max-width:100%;display:block;height:auto}
+a{color:inherit;text-decoration:none}
+button{font-family:inherit;cursor:pointer;border:none;background:none}
+h1,h2,h3,h4{font-family:'Fraunces',Georgia,serif;font-weight:600;line-height:1.2;letter-spacing:-.02em}
+h1{font-size:clamp(2rem,5vw,3.2rem);font-weight:800}
+h2{font-size:clamp(1.6rem,3.6vw,2.4rem)}
+h3{font-size:1.2rem}
+p{color:var(--texte-doux)}
+
+.wrap{max-width:1180px;margin:0 auto;padding:0 1.25rem}
+
+.btn{
+  display:inline-flex;align-items:center;gap:.55rem;
+  padding:.85rem 1.6rem;border-radius:50px;
+  font-weight:600;font-size:.95rem;
+  transition:var(--transition);cursor:pointer;
+  text-align:center;white-space:nowrap;
+}
+.btn-primary{background:var(--vert);color:white;box-shadow:0 6px 20px rgba(125,185,63,.35)}
+.btn-primary:hover{background:var(--vert-fonce);transform:translateY(-2px)}
+.btn-outline{background:transparent;color:var(--brun);border:2px solid var(--brun)}
+.btn-outline:hover{background:var(--brun);color:white}
+.btn-wa{background:#25D366;color:white}
+.btn-wa:hover{background:#1EA952;transform:translateY(-2px);box-shadow:0 10px 28px rgba(37,211,102,.4)}
+
+/* HEADER */
+#header{
+  position:sticky;top:0;z-index:900;
+  background:rgba(255,255,255,.96);
+  backdrop-filter:blur(12px);
+  -webkit-backdrop-filter:blur(12px);
+  box-shadow:0 2px 20px rgba(62,47,28,.08);
+  padding:.75rem 0;
+}
+.header-inner{display:flex;align-items:center;justify-content:space-between;gap:1rem}
+.logo-block{display:flex;align-items:center;gap:.7rem;text-decoration:none}
+.logo-block img{
+  width:48px;height:48px;object-fit:contain;
+  background:white;border-radius:50%;padding:4px;
+  box-shadow:0 3px 12px rgba(0,0,0,.15);
+}
+.logo-text{display:flex;flex-direction:column;line-height:1.1}
+.logo-text .name{
+  font-family:'Fraunces',serif;font-weight:700;
+  font-size:1.05rem;color:var(--vert-fonce);letter-spacing:.5px;
+}
+.logo-text .sub{
+  font-size:.68rem;text-transform:uppercase;letter-spacing:2px;
+  color:var(--texte-doux);font-weight:500;
+}
+.header-actions{display:flex;align-items:center;gap:.8rem}
+.back-link{
+  display:inline-flex;align-items:center;gap:.5rem;
+  font-weight:600;font-size:.9rem;color:var(--brun);
+  padding:.55rem 1rem;border-radius:50px;
+  transition:var(--transition);
+}
+.back-link:hover{background:var(--vert-clair);color:var(--vert-fonce)}
+
+/* HERO MENU */
+.menu-hero{
+  background:linear-gradient(135deg,rgba(62,47,28,.75),rgba(15,90,138,.75)),
+    url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1600&q=80') center/cover no-repeat;
+  color:white;text-align:center;
+  padding:5rem 1.25rem 4rem;
+}
+.menu-hero .eyebrow{
+  display:inline-flex;align-items:center;gap:.5rem;
+  color:var(--jaune);font-size:.78rem;font-weight:700;
+  letter-spacing:3px;text-transform:uppercase;margin-bottom:1rem;
+}
+.menu-hero .eyebrow::before,.menu-hero .eyebrow::after{
+  content:'';width:24px;height:1px;background:var(--jaune);
+}
+.menu-hero h1{color:white;margin-bottom:1rem;text-shadow:0 4px 20px rgba(0,0,0,.35)}
+.menu-hero p{
+  color:rgba(255,255,255,.92);font-size:1.1rem;
+  max-width:620px;margin:0 auto;
+}
+
+/* FILTRES */
+.filters{
+  background:white;
+  padding:1.5rem 0;
+  position:sticky;top:70px;z-index:850;
+  box-shadow:0 4px 20px rgba(62,47,28,.06);
+  margin-bottom:2rem;
+}
+.filters-inner{
+  display:flex;gap:.5rem;overflow-x:auto;
+  padding-bottom:.25rem;scrollbar-width:thin;
+}
+.filters-inner::-webkit-scrollbar{height:4px}
+.filters-inner::-webkit-scrollbar-thumb{background:var(--bordure);border-radius:4px}
+.filter-btn{
+  flex-shrink:0;
+  padding:.6rem 1.2rem;border-radius:50px;
+  background:var(--sable);color:var(--texte-doux);
+  font-weight:600;font-size:.85rem;
+  border:2px solid transparent;
+  transition:var(--transition);
+  display:inline-flex;align-items:center;gap:.4rem;
+}
+.filter-btn:hover{background:var(--vert-clair);color:var(--vert-fonce)}
+.filter-btn.active{
+  background:var(--vert);color:white;
+  box-shadow:0 4px 14px rgba(125,185,63,.35);
+}
+
+/* SECTION MENU */
+.menu-section{padding:1rem 0 4rem}
+.menu-category{margin-bottom:4rem}
+.category-header{
+  display:flex;align-items:center;gap:1rem;
+  margin-bottom:1.75rem;
+  padding-bottom:.75rem;
+  border-bottom:2px solid var(--bordure);
+}
+.category-icon{
+  width:52px;height:52px;flex-shrink:0;
+  border-radius:14px;
+  display:flex;align-items:center;justify-content:center;
+  color:white;font-size:1.4rem;
+  box-shadow:0 6px 20px rgba(0,0,0,.15);
+}
+.category-icon.vert{background:linear-gradient(135deg,var(--vert),var(--vert-fonce))}
+.category-icon.jaune{background:linear-gradient(135deg,var(--jaune),var(--jaune-fonce));color:var(--brun)}
+.category-icon.bleu{background:linear-gradient(135deg,var(--bleu),var(--bleu-fonce))}
+.category-icon.brun{background:linear-gradient(135deg,var(--brun),#2a1f12)}
+.category-title{flex:1}
+.category-title h2{color:var(--texte);margin-bottom:.15rem;font-size:1.6rem}
+.category-title p{font-size:.88rem;color:var(--texte-doux)}
+
+/* GRILLE PLATS */
+.plats-grid{
+  display:grid;
+  grid-template-columns:1fr;
+  gap:1.25rem;
+}
+
+.plat-card{
+  background:white;border-radius:var(--radius-lg);
+  overflow:hidden;transition:var(--transition);
+  border:1px solid var(--bordure);
+  display:flex;flex-direction:column;
+}
+.plat-card:hover{
+  transform:translateY(-4px);
+  box-shadow:var(--ombre-moyenne);
+  border-color:var(--vert);
+}
+
+.plat-img{
+  aspect-ratio:16/10;overflow:hidden;position:relative;
+  background:var(--sable);
+}
+.plat-img img{
+  width:100%;height:100%;object-fit:cover;
+  transition:transform .6s ease;
+}
+.plat-card:hover .plat-img img{transform:scale(1.08)}
+
+.plat-duration{
+  position:absolute;bottom:.75rem;right:.75rem;
+  background:rgba(62,47,28,.85);color:white;
+  padding:.35rem .75rem;border-radius:50px;
+  font-size:.72rem;font-weight:700;
+  display:flex;align-items:center;gap:.35rem;
+  backdrop-filter:blur(6px);
+}
+.plat-duration i{color:var(--jaune)}
+
+.plat-tag{
+  position:absolute;top:.75rem;left:.75rem;
+  background:var(--jaune);color:var(--brun);
+  padding:.3rem .8rem;border-radius:50px;
+  font-size:.7rem;font-weight:700;
+  text-transform:uppercase;letter-spacing:.5px;
+}
+
+.plat-body{padding:1.25rem 1.4rem;display:flex;flex-direction:column;flex:1}
+.plat-head{
+  display:flex;justify-content:space-between;
+  align-items:flex-start;gap:1rem;margin-bottom:.4rem;
+}
+.plat-head h3{
+  font-size:1.1rem;color:var(--texte);
+  font-family:'Fraunces',serif;font-weight:600;
+  line-height:1.3;
+}
+.plat-price{
+  color:var(--vert-fonce);font-weight:800;
+  font-family:'Fraunces',serif;font-size:1.15rem;
+  white-space:nowrap;
+}
+.plat-desc{
+  font-size:.88rem;color:var(--texte-doux);
+  margin-top:.35rem;
+}
+.plat-actions{
+  margin-top:auto;padding-top:1rem;
+  display:flex;gap:.5rem;
+  border-top:1px solid var(--bordure);
+  margin-top:1rem;
+}
+.plat-actions .btn{
+  padding:.5rem 1rem;font-size:.8rem;
+  flex:1;justify-content:center;
+}
+
+/* CARTE BOISSONS */
+.boissons-grid{
+  display:grid;grid-template-columns:repeat(2,1fr);
+  gap:.85rem;
+}
+.boisson-card{
+  background:white;border-radius:var(--radius);
+  padding:1rem 1.1rem;
+  border:1px solid var(--bordure);
+  display:flex;align-items:center;justify-content:space-between;
+  gap:.75rem;transition:var(--transition);
+}
+.boisson-card:hover{
+  transform:translateY(-3px);
+  box-shadow:var(--ombre-douce);
+  border-color:var(--jaune);
+}
+.boisson-info{display:flex;align-items:center;gap:.75rem;min-width:0}
+.boisson-icon{
+  width:38px;height:38px;flex-shrink:0;
+  border-radius:10px;
+  display:flex;align-items:center;justify-content:center;
+  font-size:.9rem;color:white;
+}
+.boisson-icon.alcool{background:linear-gradient(135deg,var(--brun),#2a1f12)}
+.boisson-icon.sucre{background:linear-gradient(135deg,var(--jaune),var(--jaune-fonce));color:var(--brun)}
+.boisson-name{
+  font-weight:600;font-size:.92rem;color:var(--texte);
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
+}
+.boisson-price{
+  font-family:'Fraunces',serif;font-weight:800;
+  color:var(--vert-fonce);font-size:1rem;
+  white-space:nowrap;
+}
+
+/* BOUTON WHATSAPP FLOTTANT */
+#whatsapp-float{
+  position:fixed;bottom:1.5rem;right:1.5rem;z-index:880;
+  width:58px;height:58px;border-radius:50%;
+  background:#25D366;color:white;
+  display:flex;align-items:center;justify-content:center;
+  font-size:1.7rem;
+  box-shadow:0 10px 30px rgba(37,211,102,.45);
+  transition:var(--transition);
+  animation:waPulse 2.4s infinite;
+}
+#whatsapp-float:hover{transform:scale(1.1) rotate(8deg)}
+@keyframes waPulse{
+  0%,100%{box-shadow:0 10px 30px rgba(37,211,102,.45)}
+  50%{box-shadow:0 10px 30px rgba(37,211,102,.8),0 0 0 12px rgba(37,211,102,.12)}
+}
+#whatsapp-float .tooltip{
+  position:absolute;right:calc(100% + 12px);
+  background:var(--brun);color:white;
+  padding:.5rem .9rem;border-radius:8px;
+  font-size:.8rem;font-weight:600;white-space:nowrap;
+  opacity:0;pointer-events:none;transition:var(--transition);
+}
+#whatsapp-float .tooltip::after{
+  content:'';position:absolute;right:-6px;top:50%;transform:translateY(-50%);
+  border:6px solid transparent;border-left-color:var(--brun);
+}
+#whatsapp-float:hover .tooltip{opacity:1}
+
+/* FOOTER */
+footer{
+  background:var(--brun);color:rgba(255,255,255,.75);
+  padding:3rem 0 1.5rem;
+}
+.footer-grid{
+  display:grid;grid-template-columns:1fr;gap:2rem;
+  padding-bottom:2rem;
+  border-bottom:1px solid rgba(255,255,255,.1);
+}
+.footer-brand img{
+  width:60px;height:60px;background:white;
+  border-radius:50%;padding:5px;margin-bottom:.9rem;
+}
+.footer-brand h3{color:white;font-size:1.15rem;margin-bottom:.5rem}
+.footer-brand p{color:rgba(255,255,255,.65);font-size:.88rem}
+.footer-col h4{
+  color:white;font-family:'Plus Jakarta Sans',sans-serif;
+  font-weight:700;font-size:.9rem;letter-spacing:1px;
+  text-transform:uppercase;margin-bottom:1rem;
+}
+.footer-col ul{list-style:none;display:flex;flex-direction:column;gap:.5rem}
+.footer-col a{font-size:.88rem;transition:var(--transition)}
+.footer-col a:hover{color:var(--jaune);padding-left:.3rem}
+.footer-bottom{
+  padding:1.5rem 0;text-align:center;
+  font-size:.8rem;color:rgba(255,255,255,.5);
+}
+.footer-bottom strong{color:var(--jaune)}
+
+/* RESPONSIVE */
+@media(min-width:640px){
+  .plats-grid{grid-template-columns:repeat(2,1fr)}
+  .boissons-grid{grid-template-columns:repeat(3,1fr)}
+}
+@media(min-width:900px){
+  .plats-grid{grid-template-columns:repeat(3,1fr)}
+  .boissons-grid{grid-template-columns:repeat(4,1fr)}
+  .footer-grid{grid-template-columns:1.5fr 1fr 1fr}
+}
+@media(min-width:1100px){
+  .plats-grid{grid-template-columns:repeat(4,1fr)}
+}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header id="header">
+  <div class="wrap header-inner">
+    <a href="index.html" class="logo-block">
+      <img src="logo.png" alt="Espace Festicas Ibelina">
+      <div class="logo-text">
+        <span class="name">Festicas Ibelina</span>
+        <span class="sub">Banfora · Burkina Faso</span>
+      </div>
+    </a>
+    <div class="header-actions">
+      <a href="index.html" class="back-link">
+        <i class="fas fa-arrow-left"></i> Accueil
+      </a>
+      <a href="https://wa.me/22646778462?text=Bonjour%20Espace%20Festicas%20Ibelina%20!" class="btn btn-wa" target="_blank" rel="noopener" style="padding:.55rem 1rem;font-size:.85rem">
+        <i class="fab fa-whatsapp"></i> Commander
+      </a>
+    </div>
+  </div>
+</header>
+
+<!-- HERO MENU -->
+<section class="menu-hero">
+  <div class="eyebrow">Notre carte</div>
+  <h1>Menu complet</h1>
+  <p>Découvrez nos plats traditionnels burkinabè, grillades savoureuses et boissons fraîches. Tous nos plats sont préparés à la commande.</p>
+</section>
+
+<!-- FILTRES -->
+<div class="filters">
+  <div class="wrap filters-inner">
+    <button class="filter-btn active" data-category="all">
+      <i class="fas fa-th-large"></i> Tout voir
+    </button>
+    <button class="filter-btn" data-category="plats">
+      <i class="fas fa-utensils"></i> Plats
+    </button>
+    <button class="filter-btn" data-category="grillades">
+      <i class="fas fa-fire"></i> Grillades
+    </button>
+    <button class="filter-btn" data-category="accompagnements">
+      <i class="fas fa-drumstick-bite"></i> Accompagnements
+    </button>
+    <button class="filter-btn" data-category="alcool">
+      <i class="fas fa-wine-bottle"></i> Alcool
+    </button>
+    <button class="filter-btn" data-category="sucrerie">
+      <i class="fas fa-glass-water"></i> Sucreries
+    </button>
+  </div>
+</div>
+
+<!-- MENU -->
+<main class="menu-section">
+  <div class="wrap">
+
+    <!-- ====== CATÉGORIE : PLATS TRADITIONNELS ====== -->
+    <section class="menu-category" data-cat="plats">
+      <div class="category-header">
+        <div class="category-icon vert"><i class="fas fa-utensils"></i></div>
+        <div class="category-title">
+          <h2>Plats traditionnels</h2>
+          <p>Le meilleur de la cuisine burkinabè</p>
+        </div>
+      </div>
+
+      <div class="plats-grid">
+
+        <article class="plat-card">
+          <div class="plat-img">
+            <span class="plat-tag">Signature</span>
+            <img src="https://images.unsplash.com/photo-1512058564366-18510be2db19?w=600&q=80" alt="Riz au soumbala" loading="lazy">
+            <span class="plat-duration"><i class="far fa-clock"></i> 45 min</span>
+          </div>
+          <div class="plat-body">
+            <div class="plat-head">
+              <h3>Riz au soumbala</h3>
+              <span class="plat-price">8 000 F</span>
+            </div>
+            <p class="plat-desc">Riz parfumé au soumbala, mijoté avec viande et épices locales.</p>
+            <div class="plat-actions">
+              <a href="https://wa.me/22646778462?text=Bonjour,%20je%20souhaite%20commander%20:%20Riz%20au%20soumbala" class="btn btn-wa" target="_blank" rel="noopener">
+                <i class="fab fa-whatsapp"></i> Commander
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="plat-card">
+          <div class="plat-img">
+            <img src="https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9?w=600&q=80" alt="Spaghetti au soumbala avec poulet" loading="lazy">
+            <span class="plat-duration"><i class="far fa-clock"></i> 45 min</span>
+          </div>
+          <div class="plat-body">
+            <div class="plat-head">
+              <h3>Spaghetti au soumbala + poulet</h3>
+              <span class="plat-price">8 000 F</span>
+            </div>
+            <p class="plat-desc">Spaghetti savoureux au soumbala accompagnés de poulet tendre.</p>
+            <div class="plat-actions">
+              <a href="https://wa.me/22646778462?text=Bonjour,%20je%20souhaite%20commander%20:%20Spaghetti%20au%20soumbala%20avec%20poulet" class="btn btn-wa" target="_blank" rel="noopener">
+                <i class="fab fa-whatsapp"></i> Commander
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="plat-card">
+          <div class="plat-img">
+            <img src="https://images.unsplash.com/photo-1551183053-bf91a1d81141?w=600&q=80" alt="Spaghetti bolognaise" loading="lazy">
+            <span class="plat-duration"><i class="far fa-clock"></i> 45 min</span>
+          </div>
+          <div class="plat-body">
+            <div class="plat-head">
+              <h3>Spaghetti bolognaise</h3>
+              <span class="plat-price">2 500 F</span>
+            </div>
+            <p class="plat-desc">Spaghetti à la sauce bolognaise maison.</p>
+            <div class="plat-actions">
+              <a href="https://wa.me/22646778462?text=Bonjour,%20je%20souhaite%20commander%20:%20Spaghetti%20bolognaise" class="btn btn-wa" target="_blank" rel="noopener">
+                <i class="fab fa-whatsapp"></i> Commander
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="plat-card">
+          <div class="plat-img">
+            <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=600&q=80" alt="Babenda" loading="lazy">
+            <span class="plat-duration"><i class="far fa-clock"></i> 1 h</span>
+          </div>
+          <div class="plat-body">
+            <div class="plat-head">
+              <h3>Babenda</h3>
+              <span class="plat-price">1 000 F</span>
+            </div>
+            <p class="plat-desc">Le classique burkinabè à base de feuilles et de haricots.</p>
+            <div class="plat-actions">
+              <a href="https://wa.me/22646778462?text=Bonjour,%20je%20souhaite%20commander%20:%20Babenda" class="btn btn-wa" target="_blank" rel="noopener">
+                <i class="fab fa-whatsapp"></i> Commander
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="plat-card">
+          <div class="plat-img">
+            <img src="https://images.unsplash.com/photo-1547592180-85f173990554?w=600&q=80" alt="Haricot" loading="lazy">
+            <span class="plat-duration"><i class="far fa-clock"></i> 1 h</span>
+          </div>
+          <div class="plat-body">
+            <div class="plat-head">
+              <h3>Haricot</h3>
+              <span class="plat-price">1 000 F</span>
+            </div>
+            <p class="plat-desc">Haricots mijotés à la sauce tomate, servis avec de l'attiéké ou du gari.</p>
+            <div class="plat-actions">
+              <a href="https://wa.me/22646778462?text=Bonjour,%20je%20souhaite%20commander%20:%20Haricot" class="btn btn-wa" target="_blank" rel="noopener">
+                <i class="fab fa-whatsapp"></i> Commander
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="plat-card">
+          <div class="plat-img">
+            <img src="https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?w=600&q=80" alt="Donkounou" loading="lazy">
+            <span class="plat-duration"><i class="far fa-clock"></i> 30 min</span>
+          </div>
+          <div class="plat-body">
+            <div class="plat-head">
+              <h3>Donkounou</h3>
+              <span class="plat-price">1 500 F</span>
+            </div>
+            <p class="plat-desc">Boule de maïs traditionnelle accompagnée de sa sauce.</p>
+            <div class="plat-actions">
+              <a href="https://wa.me/22646778462?text=Bonjour,%20je%20souhaite%20commander%20:%20Donkounou" class="btn btn-wa" target="_blank" rel="noopener">
+                <i class="fab fa-whatsapp"></i> Commander
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="plat-card">
+          <div class="plat-img">
+            <img src="https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=600&q=80" alt="Placali" loading="lazy">
+            <span class="plat-duration"><i class="far fa-clock"></i> 45 min</span>
+          </div>
+          <div class="plat-body">
+            <div class="plat-head">
+              <h3>Placali</h3>
+              <span class="plat-price">1 500 F</span>
+            </div>
+            <p class="plat-desc">Pâte de maïs fermentée, servie avec une sauce claire ou graine.</p>
+            <div class="plat-actions">
+              <a href="https://wa.me/22646778462?text=Bonjour,%20je%20souhaite%20commander%20:%20Placali" class="btn btn-wa" target="_blank" rel="noopener">
+                <i class="fab fa-whatsapp"></i> Commander
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="plat-card">
+          <div class="plat-img">
+            <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=600&q=80" alt="Foutou" loading="lazy">
+            <span class="plat-duration"><i class="far fa-clock"></i> 45 min</span>
+          </div>
+          <div class="plat-body">
+            <div class="plat-head">
+              <h3>Foutou</h3>
+              <span class="plat-price">2 000 F</span>
+            </div>
+            <p class="plat-desc">Foutou d'igname ou de banane plantain. Sauce claire ou sauce graine.</p>
+            <div class="plat-actions">
+              <a href="https://wa.me/22646778462?text=Bonjour,%20je%20souhaite%20commander%20:%20Foutou" class="btn btn-wa" target="_blank" rel="noopener">
+                <i class="fab fa-whatsapp"></i> Commander
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="plat-card">
+          <div class="plat-img">
+            <img src="https://images.unsplash.com/photo-1543339494-b4cd4f7ba686?w=600&q=80" alt="Ragoût de pomme de terre" loading="lazy">
+            <span class="plat-duration"><i class="far fa-clock"></i> 45 min</span>
+          </div>
+          <div class="plat-body">
+            <div class="plat-head">
+              <h3>Ragoût de pomme de terre</h3>
+              <span class="plat-price">1 500 F</span>
+            </div>
+            <p class="plat-desc">Pommes de terre fondantes mijotées dans une sauce tomate parfumée.</p>
+            <div class="plat-actions">
+              <a href="https://wa.me/22646778462?text=Bonjour,%20je%20souhaite%20commander%20:%20Rago%C3%BBt%20de%20pomme%20de%20terre" class="btn btn-wa" target="_blank" rel="noopener">
+                <i class="fab fa-whatsapp"></i> Commander
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="plat-card">
+          <div class="plat-img">
+            <img src="https://images.unsplash.com/photo-1588012886078-8270ad2264a7?w=600&q=80" alt="Pomme de terre sautée à la viande hachée" loading="lazy">
+            <span class="plat-duration"><i class="far fa-clock"></i> 45 min</span>
+          </div>
+          <div class="plat-body">
+            <div class="plat-head">
+              <h3>Pomme de terre sautée + viande hachée</h3>
+              <span class="plat-price">2 000 F</span>
+            </div>
+            <p class="plat-desc">Pommes de terre sautées aux oignons et viande hachée.</p>
+            <div class="plat-actions">
+              <a href="https://wa.me/22646778462?text=Bonjour,%20je%20souhaite%20commander%20:%20Pomme%20de%20terre%20saut%C3%A9e%20viande%20hach%C3%A9e" class="btn btn-wa" target="_blank" rel="noopener">
+                <i class="fab fa-whatsapp"></i> Commander
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="plat-card">
+          <div class="plat-img">
+            <img src="https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?w=600&q=80" alt="Ragoût d'ignames" loading="lazy">
+            <span class="plat-duration"><i class="far fa-clock"></i> 45 min</span>
+          </div>
+          <div class="plat-body">
+            <div class="plat-head">
+              <h3>Ragoût d'ignames</h3>
+              <span class="plat-price">1 500 F</span>
+            </div>
+            <p class="plat-desc">Igname fondante mijotée avec viande et légumes.</p>
+            <div class="plat-actions">
+              <a href="https://wa.me/22646778462?text=Bonjour,%20je%20souhaite%20commander%20:%20Rago%C3%BBt%20d%27ignames" class="btn btn-wa" target="_blank" rel="noopener">
+                <i class="fab fa-whatsapp"></i> Commander
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="plat-card">
+          <div class="plat-img">
+            <img src="https://images.unsplash.com/photo-1543339494-b4cd4f7ba686?w=600&q=80" alt="Ragoût de patate douce" loading="lazy">
+            <span class="plat-duration"><i class="far fa-clock"></i> 45 min</span>
+          </div>
+          <div class="plat-body">
+            <div class="plat-head">
+              <h3>Ragoût de patate douce</h3>
+              <span class="plat-price">1 500 F</span>
+            </div>
+            <p class="plat-desc">Patate douce mijotée dans une sauce onctueuse aux épices.</p>
+            <div class="plat-actions">
+              <a href="https://wa.me/22646778462?text=Bonjour,%20je%20souhaite%20commander%20:%20Rago%C3%BBt%20de%20patate%20douce" class="btn btn-wa" target="_blank" rel="noopener">
+                <i class="fab fa-whatsapp"></i> Commander
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="plat-card">
+          <div class="plat-img">
+            <img src="https://images.unsplash.com/photo-1547592166-23ac45744acd?w=600&q=80" alt="Soupe de viande de brousse" loading="lazy">
+            <span class="plat-duration"><i class="far fa-clock"></i> 45 min</span>
+          </div>
+          <div class="plat-body">
+            <div class="plat-head">
+              <h3>Soupe de viande de brousse</h3>
+              <span class="plat-price">2 000 F</span>
+            </div>
+            <p class="plat-desc">Soupe traditionnelle parfumée à la viande de brousse.</p>
+            <div class="plat-actions">
+              <a href="https://wa.me/22646778462?text=Bonjour,%20je%20souhaite%20commander%20:%20Soupe%20de%20viande%20de%20brousse" class="btn btn-wa" target="_blank" rel="noopener">
+                <i class="fab fa-whatsapp"></i> Commander
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="plat-card">
+          <div class="plat-img">
+            <img src="https://images.unsplash.com/photo-1547592180-85f173990554?w=600&q=80" alt="Soupe de boyau" loading="lazy">
+            <span class="plat-duration"><i class="far fa-clock"></i> 45 min</span>
+          </div>
+          <div class="plat-body">
+            <div class="plat-head">
+              <h3>Soupe de boyau</h3>
+              <span class="plat-price">1 500 F</span>
+            </div>
+            <p class="plat-desc">Boyaux mijotés dans un bouillon parfumé aux épices locales.</p>
+            <div class="plat-actions">
+              <a href="https://wa.me/22646778462?text=Bonjour,%20je%20souhaite%20commander%20:%20Soupe%20de%20boyau" class="btn btn-wa" target="_blank" rel="noopener">
+                <i class="fab fa-whatsapp"></i> Commander
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="plat-card">
+          <div class="plat-img">
+            <img src="https://images.unsplash.com/photo-1547592180-85f173990554?w=600&q=80" alt="Soupe de jarrêt" loading="lazy">
+            <span class="plat-duration"><i class="far fa-clock"></i> 45 min</span>
+          </div>
+          <div class="plat-body">
+            <div class="plat-head">
+              <h3>Soupe de jarrêt (os)</h3>
+              <span class="plat-price">2 000 F</span>
+            </div>
+            <p class="plat-desc">Soupe riche à base d'os de jarrêt, mijotée longuement.</p>
+            <div class="plat-actions">
+              <a href="https://wa.me/22646778462?text=Bonjour,%20je%20souhaite%20commander%20:%20Soupe%20de%20jarr%C3%AAt" class="btn btn-wa" target="_blank" rel="noopener">
+                <i class="fab fa-whatsapp"></i> Commander
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="plat-card">
+          <div class="plat-img">
+            <img src="https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?w=600&q=80" alt="Soupe de poisson carpe" loading="lazy">
+            <span class="plat-duration"><i class="far fa-clock"></i> 45 min</span>
+          </div>
+          <div class="plat-body">
+            <div class="plat-head">
+              <h3>Soupe de poisson carpe</h3>
+              <span class="plat-price">2 500 F</span>
+            </div>
+            <p class="plat-desc">Carpe fraîche mijotée dans un bouillon savoureux.</p>
+            <div class="plat-actions">
+              <a href="https://wa.me/22646778462?text=Bonjour,%20je%20souhaite%20commander%20:%20Soupe%20de%20poisson%20carpe" class="btn btn-wa" target="_blank" rel="noopener">
+                <i class="fab fa-whatsapp"></i> Commander
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="plat-card">
+          <div class="plat-img">
+            <img src="https://images.unsplash.com/photo-1547592180-85f173990554?w=600&q=80" alt="Soupe de poulet" loading="lazy">
+            <span class="plat-duration"><i class="far fa-clock"></i> 45 min</span>
+          </div>
+          <div class="plat-body">
+            <div class="plat-head">
+              <h3>Soupe de poulet</h3>
+              <span class="plat-price">2 500 F</span>
+            </div>
+            <p class="plat-desc">Soupe réconfortante au poulet fermier.</p>
+            <div class="plat-actions">
+              <a href="https://wa.me/22646778462?text=Bonjour,%20je%20souhaite%20commander%20:%20Soupe%20de%20poulet" class="btn btn-wa" target="_blank" rel="noopener">
+                <i class="fab fa-whatsapp"></i> Commander
+              </a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ====== CATÉGORIE : GRILLADES / POULET ====== -->
+    <section class="menu-category" data-cat="grillades">
+      <div class="category-header">
+        <div class="category-icon jaune"><i class="fas fa-fire"></i></div>
+        <div class="category-title">
+          <h2>Grillades & Poulet</h2>
+          <p>Nos spécialités au feu de bois</p>
+        </div>
+      </div>
+
+      <div class="plats-grid">
+
+        <article class="plat-card">
+          <div class="plat-img">
+            <span class="plat-tag">Populaire</span>
+            <img src="https://images.unsplash.com/photo-1598103442097-8b74394b95c6?w=600&q=80" alt="Poulet braisé" loading="lazy">
+            <span class="plat-duration"><i class="far fa-clock"></i> 45 min</span>
+          </div>
+          <div class="plat-body">
+            <div class="plat-head">
+              <h3>Poulet braisé</h3>
+              <span class="plat-price">7 000 F</span>
+            </div>
+            <p class="plat-desc">Poulet entier braisé au feu de bois, mariné aux épices maison.</p>
+            <div class="plat-actions">
+              <a href="https://wa.me/22646778462?text=Bonjour,%20je%20souhaite%20commander%20:%20Poulet%20brais%C3%A9" class="btn btn-wa" target="_blank" rel="noopener">
+                <i class="fab fa-whatsapp"></i> Commander
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="plat-card">
+          <div class="plat-img">
+            <img src="https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?w=600&q=80" alt="Poulet braisé à l'ail" loading="lazy">
+            <span class="plat-duration"><i class="far fa-clock"></i> 45 min</span>
+          </div>
+          <div class="plat-body">
+            <div class="plat-head">
+              <h3>Poulet braisé à l'ail</h3>
+              <span class="plat-price">7 000 F</span>
+            </div>
+            <p class="plat-desc">Poulet braisé généreusement parfumé à l'ail frais.</p>
+            <div class="plat-actions">
+              <a href="https://wa.me/22646778462?text=Bonjour,%20je%20souhaite%20commander%20:%20Poulet%20brais%C3%A9%20%C3%A0%20l%27ail" class="btn btn-wa" target="_blank" rel="noopener">
+                <i class="fab fa-whatsapp"></i> Commander
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="plat-card">
+          <div class="plat-img">
+            <img src="https://images.unsplash.com/photo-1598515214211-89d3c73ae83b?w=600&q=80" alt="Poulet sauté" loading="lazy">
+            <span class="plat-duration"><i class="far fa-clock"></i> 45 min</span>
+          </div>
+          <div class="plat-body">
+            <div class="plat-head">
+              <h3>Poulet sauté</h3>
+              <span class="plat-price">7 000 F</span>
+            </div>
+            <p class="plat-desc">Poulet sauté aux oignons et poivrons, servi avec des frites.</p>
+            <div class="plat-actions">
+              <a href="https://wa.me/22646778462?text=Bonjour,%20je%20souhaite%20commander%20:%20Poulet%20saut%C3%A9" class="btn btn-wa" target="_blank" rel="noopener">
+                <i class="fab fa-whatsapp"></i> Commander
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="plat-card">
+          <div class="plat-img">
+            <img src="https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?w=600&q=80" alt="Poulet au rabilet" loading="lazy">
+            <span class="plat-duration"><i class="far fa-clock"></i> 45 min</span>
+          </div>
+          <div class="plat-body">
+            <div class="plat-head">
+              <h3>Poulet au rabilet</h3>
+              <span class="plat-price">7 000 F</span>
+            </div>
+            <p class="plat-desc">Poulet mariné au rabilet, grillé au feu de bois.</p>
+            <div class="plat-actions">
+              <a href="https://wa.me/22646778462?text=Bonjour,%20je%20souhaite%20commander%20:%20Poulet%20au%20rabilet" class="btn btn-wa" target="_blank" rel="noopener">
+                <i class="fab fa-whatsapp"></i> Commander
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="plat-card">
+          <div class="plat-img">
+            <img src="https://images.unsplash.com/photo-1626082927389-6cd097cdc6ec?w=600&q=80" alt="Poulet mayo" loading="lazy">
+          </div>
+          <div class="plat-body">
+            <div class="plat-head">
+              <h3>Poulet mayo</h3>
+              <span class="plat-price">7 000 F</span>
+            </div>
+            <p class="plat-desc">Poulet grillé servi avec une sauce mayonnaise maison.</p>
+            <div class="plat-actions">
+              <a href="https://wa.me/22646778462?text=Bonjour,%20je%20souhaite%20commander%20:%20Poulet%20mayo" class="btn btn-wa" target="_blank" rel="noopener">
+                <i class="fab fa-whatsapp"></i> Commander
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="plat-card">
+          <div class="plat-img">
+            <img src="https://images.unsplash.com/photo-1529193591184-b1d58069ecdd?w=600&q=80" alt="Gésier sauté" loading="lazy">
+            <span class="plat-duration"><i class="far fa-clock"></i> 30 min</span>
+          </div>
+          <div class="plat-body">
+            <div class="plat-head">
+              <h3>Gésier sauté</h3>
+              <span class="plat-price">2 000 F</span>
+            </div>
+            <p class="plat-desc">Gésiers sautés aux oignons et épices.</p>
+            <div class="plat-actions">
+              <a href="https://wa.me/22646778462?text=Bonjour,%20je%20souhaite%20commander%20:%20G%C3%A9sier%20saut%C3%A9" class="btn btn-wa" target="_blank" rel="noopener">
+                <i class="fab fa-whatsapp"></i> Commander
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="plat-card">
+          <div class="plat-img">
+            <img src="https://images.unsplash.com/photo-1544025162-d76694265947?w=600&q=80" alt="Rognon sauté" loading="lazy">
+            <span class="plat-duration"><i class="far fa-clock"></i> 30 min</span>
+          </div>
+          <div class="plat-body">
+            <div class="plat-head">
+              <h3>Rognon sauté</h3>
+              <span class="plat-price">2 000 F</span>
+            </div>
+            <p class="plat-desc">Rognons sautés aux épices et oignons confits.</p>
+            <div class="plat-actions">
+              <a href="https://wa.me/22646778462?text=Bonjour,%20je%20souhaite%20commander%20:%20Rognon%20saut%C3%A9" class="btn btn-wa" target="_blank" rel="noopener">
+                <i class="fab fa-whatsapp"></i> Commander
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="plat-card">
+          <div class="plat-img">
+            <img src="https://images.unsplash.com/photo-1544025162-d76694265947?w=600&q=80" alt="Foie sauté" loading="lazy">
+            <span class="plat-duration"><i class="far fa-clock"></i> 30 min</span>
+          </div>
+          <div class="plat-body">
+            <div class="plat-head">
+              <h3>Foie sauté</h3>
+              <span class="plat-price">2 000 F</span>
+            </div>
+            <p class="plat-desc">Foie sauté aux oignons et persil.</p>
+            <div class="plat-actions">
+              <a href="https://wa.me/22646778462?text=Bonjour,%20je%20souhaite%20commander%20:%20Foie%20saut%C3%A9" class="btn btn-wa" target="_blank" rel="noopener">
+                <i class="fab fa-whatsapp"></i> Commander
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="plat-card">
+          <div class="plat-img">
+            <img src="https://images.unsplash.com/photo-1544025162-d76694265947?w=600&q=80" alt="Cœur sauté" loading="lazy">
+            <span class="plat-duration"><i class="far fa-clock"></i> 30 min</span>
+          </div>
+          <div class="plat-body">
+            <div class="plat-head">
+              <h3>Cœur sauté</h3>
+              <span class="plat-price">2 000 F</span>
+            </div>
+            <p class="plat-desc">Cœurs sautés aux épices maison.</p>
+            <div class="plat-actions">
+              <a href="https://wa.me/22646778462?text=Bonjour,%20je%20souhaite%20commander%20:%20Coeur%20saut%C3%A9" class="btn btn-wa" target="_blank" rel="noopener">
+                <i class="fab fa-whatsapp"></i> Commander
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="plat-card">
+          <div class="plat-img">
+            <span class="plat-tag">Snack</span>
+            <img src="https://images.unsplash.com/photo-1630384060421-cb20d0e0649d?w=600&q=80" alt="Brochettes de viande" loading="lazy">
+            <span class="plat-duration"><i class="far fa-clock"></i> 20 min</span>
+          </div>
+          <div class="plat-body">
+            <div class="plat-head">
+              <h3>Brochettes de viande</h3>
+              <span class="plat-price">200 F</span>
+            </div>
+            <p class="plat-desc">Brochette de bœuf grillée, tendre et savoureuse.</p>
+            <div class="plat-actions">
+              <a href="https://wa.me/22646778462?text=Bonjour,%20je%20souhaite%20commander%20:%20Brochettes%20de%20viande" class="btn btn-wa" target="_blank" rel="noopener">
+                <i class="fab fa-whatsapp"></i> Commander
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="plat-card">
+          <div class="plat-img">
+            <img src="https://images.unsplash.com/photo-1529193591184-b1d58069ecdd?w=600&q=80" alt="Brochettes de gésier" loading="lazy">
+            <span class="plat-duration"><i class="far fa-clock"></i> 20 min</span>
+          </div>
+          <div class="plat-body">
+            <div class="plat-head">
+              <h3>Brochettes de gésier</h3>
+              <span class="plat-price">300 F</span>
+            </div>
+            <p class="plat-desc">Brochettes de gésier marinées et grillées.</p>
+            <div class="plat-actions">
+              <a href="https://wa.me/22646778462?text=Bonjour,%20je%20souhaite%20commander%20:%20Brochettes%20de%20g%C3%A9sier" class="btn btn-wa" target="_blank" rel="noopener">
+                <i class="fab fa-whatsapp"></i> Commander
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="plat-card">
+          <div class="plat-img">
+            <img src="https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?w=600&q=80" alt="Brochette de poulet" loading="lazy">
+            <span class="plat-duration"><i class="far fa-clock"></i> 30 min</span>
+          </div>
+          <div class="plat-body">
+            <div class="plat-head">
+              <h3>Brochette de poulet</h3>
+              <span class="plat-price">500 F</span>
+            </div>
+            <p class="plat-desc">Brochette de poulet marinée et grillée.</p>
+            <div class="plat-actions">
+              <a href="https://wa.me/22646778462?text=Bonjour,%20je%20souhaite%20commander%20:%20Brochette%20de%20poulet" class="btn btn-wa" target="_blank" rel="noopener">
+                <i class="fab fa-whatsapp"></i> Commander
+              </a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ====== CATÉGORIE : ACCOMPAGNEMENTS ====== -->
+    <section class="menu-category" data-cat="accompagnements">
+      <div class="category-header">
+        <div class="category-icon bleu"><i class="fas fa-drumstick-bite"></i></div>
+        <div class="category-title">
+          <h2>Accompagnements & Snacks</h2>
+          <p>Pour compléter votre repas</p>
+        </div>
+      </div>
+
+      <div class="plats-grid">
+
+        <article class="plat-card">
+          <div class="plat-img">
+            <img src="https://images.unsplash.com/photo-1630384060421-cb20d0e0649d?w=600&q=80" alt="Frites de pomme de terre" loading="lazy">
+            <span class="plat-duration"><i class="far fa-clock"></i> 20 min</span>
+          </div>
+          <div class="plat-body">
+            <div class="plat-head">
+              <h3>Frites de pomme de terre</h3>
+              <span class="plat-price">1 000 F</span>
+            </div>
+            <p class="plat-desc">Frites croustillantes dorées.</p>
+            <div class="plat-actions">
+              <a href="https://wa.me/22646778462?text=Bonjour,%20je%20souhaite%20commander%20:%20Frites" class="btn btn-wa" target="_blank" rel="noopener">
+                <i class="fab fa-whatsapp"></i> Commander
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="plat-card">
+          <div class="plat-img">
+            <img src="https://images.unsplash.com/photo-1585109843460-2a5e6e0c0b1c?w=600&q=80" alt="Alloco" loading="lazy">
+            <span class="plat-duration"><i class="far fa-clock"></i> 20 min</span>
+          </div>
+          <div class="plat-body">
+            <div class="plat-head">
+              <h3>Alloco</h3>
+              <span class="plat-price">1 000 F</span>
+            </div>
+            <p class="plat-desc">Bananes plantains frites, dorées et fondantes.</p>
+            <div class="plat-actions">
+              <a href="https://wa.me/22646778462?text=Bonjour,%20je%20souhaite%20commander%20:%20Alloco" class="btn btn-wa" target="_blank" rel="noopener">
+                <i class="fab fa-whatsapp"></i> Commander
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="plat-card">
+          <div class="plat-img">
+            <img src="https://images.unsplash.com/photo-1599507580740-5b47e7c4e8a9?w=600&q=80" alt="Saucisse" loading="lazy">
+            <span class="plat-duration"><i class="far fa-clock"></i> 20 min</span>
+          </div>
+          <div class="plat-body">
+            <div class="plat-head">
+              <h3>Saucisse</h3>
+              <span class="plat-price">500 F</span>
+            </div>
+            <p class="plat-desc">Saucisse grillée.</p>
+            <div class="plat-actions">
+              <a href="https://wa.me/22646778462?text=Bonjour,%20je%20souhaite%20commander%20:%20Saucisse" class="btn btn-wa" target="_blank" rel="noopener">
+                <i class="fab fa-whatsapp"></i> Commander
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="plat-card">
+          <div class="plat-img">
+            <img src="https://images.unsplash.com/photo-1599507580740-5b47e7c4e8a9?w=600&q=80" alt="Merguez" loading="lazy">
+          </div>
+          <div class="plat-body">
+            <div class="plat-head">
+              <h3>Merguez</h3>
+              <span class="plat-price">300 F</span>
+            </div>
+            <p class="plat-desc">Merguez grillée aux épices.</p>
+            <div class="plat-actions">
+              <a href="https://wa.me/22646778462?text=Bonjour,%20je%20souhaite%20commander%20:%20Merguez" class="btn btn-wa" target="_blank" rel="noopener">
+                <i class="fab fa-whatsapp"></i> Commander
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="plat-card">
+          <div class="plat-img">
+            <img src="https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?w=600&q=80" alt="Attiéké + Alloco + Poisson carpe" loading="lazy">
+            <span class="plat-duration"><i class="far fa-clock"></i> 15 min</span>
+          </div>
+          <div class="plat-body">
+            <div class="plat-head">
+              <h3>Attiéké + Alloco + Poisson carpe</h3>
+              <span class="plat-price">3 000 F</span>
+            </div>
+            <p class="plat-desc">Le trio parfait : attiéké, alloco et carpe grillée.</p>
+            <div class="plat-actions">
+              <a href="https://wa.me/22646778462?text=Bonjour,%20je%20souhaite%20commander%20:%20Atti%C3%A9k%C3%A9%20alloco%20poisson" class="btn btn-wa" target="_blank" rel="noopener">
+                <i class="fab fa-whatsapp"></i> Commander
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="plat-card">
+          <div class="plat-img">
+            <img src="https://images.unsplash.com/photo-1585109843460-2a5e6e0c0b1c?w=600&q=80" alt="Attiéké simple" loading="lazy">
+            <span class="plat-duration"><i class="far fa-clock"></i> 15 min</span>
+          </div>
+          <div class="plat-body">
+            <div class="plat-head">
+              <h3>Attiéké simple</h3>
+              <span class="plat-price">1 500 F</span>
+            </div>
+            <p class="plat-desc">Semoule de manioc fermentée.</p>
+            <div class="plat-actions">
+              <a href="https://wa.me/22646778462?text=Bonjour,%20je%20souhaite%20commander%20:%20Atti%C3%A9k%C3%A9%20simple" class="btn btn-wa" target="_blank" rel="noopener">
+                <i class="fab fa-whatsapp"></i> Commander
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="plat-card">
+          <div class="plat-img">
+            <img src="https://images.unsplash.com/photo-1512058564366-18510be2db19?w=600&q=80" alt="Riz gras" loading="lazy">
+          </div>
+          <div class="plat-body">
+            <div class="plat-head">
+              <h3>Riz gras</h3>
+              <span class="plat-price">1 000 F</span>
+            </div>
+            <p class="plat-desc">Riz mijoté aux légumes et viande.</p>
+            <div class="plat-actions">
+              <a href="https://wa.me/22646778462?text=Bonjour,%20je%20souhaite%20commander%20:%20Riz%20gras" class="btn btn-wa" target="_blank" rel="noopener">
+                <i class="fab fa-whatsapp"></i> Commander
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="plat-card">
+          <div class="plat-img">
+            <img src="https://images.unsplash.com/photo-1512058564366-18510be2db19?w=600&q=80" alt="Riz sauce" loading="lazy">
+          </div>
+          <div class="plat-body">
+            <div class="plat-head">
+              <h3>Riz sauce</h3>
+              <span class="plat-price">1 000 F</span>
+            </div>
+            <p class="plat-desc">Riz blanc accompagné d'une sauce au choix.</p>
+            <div class="plat-actions">
+              <a href="https://wa.me/22646778462?text=Bonjour,%20je%20souhaite%20commander%20:%20Riz%20sauce" class="btn btn-wa" target="_blank" rel="noopener">
+                <i class="fab fa-whatsapp"></i> Commander
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="plat-card">
+          <div class="plat-img">
+            <img src="https://images.unsplash.com/photo-1547592180-85f173990554?w=600&q=80" alt="Tô" loading="lazy">
+          </div>
+          <div class="plat-body">
+            <div class="plat-head">
+              <h3>Tô</h3>
+              <span class="plat-price">1 000 F</span>
+            </div>
+            <p class="plat-desc">Pâte de mil ou de maïs, accompagnée d'une sauce traditionnelle.</p>
+            <div class="plat-actions">
+              <a href="https://wa.me/22646778462?text=Bonjour,%20je%20souhaite%20commander%20:%20T%C3%B4" class="btn btn-wa" target="_blank" rel="noopener">
+                <i class="fab fa-whatsapp"></i> Commander
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="plat-card">
+          <div class="plat-img">
+            <img src="https://images.unsplash.com/photo-1585109843460-2a5e6e0c0b1c?w=600&q=80" alt="Attiéké" loading="lazy">
+          </div>
+          <div class="plat-body">
+            <div class="plat-head">
+              <h3>Attiéké</h3>
+              <span class="plat-price">1 500 F</span>
+            </div>
+            <p class="plat-desc">Attiéké servi avec sa sauce.</p>
+            <div class="plat-actions">
+              <a href="https://wa.me/22646778462?text=Bonjour,%20je%20souhaite%20commander%20:%20Atti%C3%A9k%C3%A9" class="btn btn-wa" target="_blank" rel="noopener">
+                <i class="fab fa-whatsapp"></i> Commander
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="plat-card">
+          <div class="plat-img">
+            <img src="https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?w=600&q=80" alt="Donkounou" loading="lazy">
+          </div>
+          <div class="plat-body">
+            <div class="plat-head">
+              <h3>Donkounou</h3>
+              <span class="plat-price">1 500 F</span>
+            </div>
+            <p class="plat-desc">Boule de maïs traditionnelle.</p>
+            <div class="plat-actions">
+              <a href="https://wa.me/22646778462?text=Bonjour,%20je%20souhaite%20commander%20:%20Donkounou" class="btn btn-wa" target="_blank" rel="noopener">
+                <i class="fab fa-whatsapp"></i> Commander
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="plat-card">
+          <div class="plat-img">
+            <img src="https://images.unsplash.com/photo-1551183053-bf91a1d81141?w=600&q=80" alt="Spaghetti sauce tomate" loading="lazy">
+          </div>
+          <div class="plat-body">
+            <div class="plat-head">
+              <h3>Spaghetti sauce tomate</h3>
+              <span class="plat-price">1 500 F</span>
+            </div>
+            <p class="plat-desc">Spaghetti à la sauce tomate maison.</p>
+            <div class="plat-actions">
+              <a href="https://wa.me/22646778462?text=Bonjour,%20je%20souhaite%20commander%20:%20Spaghetti%20sauce%20tomate" class="btn btn-wa" target="_blank" rel="noopener">
+                <i class="fab fa-whatsapp"></i> Commander
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="plat-card">
+          <div class="plat-img">
+            <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=600&q=80" alt="Babenda" loading="lazy">
+          </div>
+          <div class="plat-body">
+            <div class="plat-head">
+              <h3>Babenda</h3>
+              <span class="plat-price">1 000 F</span>
+            </div>
+            <p class="plat-desc">Le classique burkinabè.</p>
+            <div class="plat-actions">
+              <a href="https://wa.me/22646778462?text=Bonjour,%20je%20souhaite%20commander%20:%20Babenda" class="btn btn-wa" target="_blank" rel="noopener">
+                <i class="fab fa-whatsapp"></i> Commander
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="plat-card">
+          <div class="plat-img">
+            <img src="https://images.unsplash.com/photo-1547592180-85f173990554?w=600&q=80" alt="Couscous arabe" loading="lazy">
+          </div>
+          <div class="plat-body">
+            <div class="plat-head">
+              <h3>Couscous arabe</h3>
+              <span class="plat-price">1 500 F</span>
+            </div>
+            <p class="plat-desc">Couscous accompagné de légumes et viande.</p>
+            <div class="plat-actions">
+              <a href="https://wa.me/22646778462?text=Bonjour,%20je%20souhaite%20commander%20:%20Couscous%20arabe" class="btn btn-wa" target="_blank" rel="noopener">
+                <i class="fab fa-whatsapp"></i> Commander
+              </a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ====== CATÉGORIE : ALCOOL ====== -->
+    <section class="menu-category" data-cat="alcool">
+      <div class="category-header">
+        <div class="category-icon brun"><i class="fas fa-wine-bottle"></i></div>
+        <div class="category-title">
+          <h2>Boissons alcoolisées</h2>
+          <p>Bières et boissons fraîches</p>
+        </div>
+      </div>
+
+      <div class="boissons-grid">
+
+        <div class="boisson-card">
+          <div class="boisson-info">
+            <div class="boisson-icon alcool"><i class="fas fa-beer"></i></div>
+            <span class="boisson-name">Brakina</span>
+          </div>
+          <span class="boisson-price">1 000 F</span>
+        </div>
+
+        <div class="boisson-card">
+          <div class="boisson-info">
+            <div class="boisson-icon alcool"><i class="fas fa-beer"></i></div>
+            <span class="boisson-name">Sobbra</span>
+          </div>
+          <span class="boisson-price">1 000 F</span>
+        </div>
+
+        <div class="boisson-card">
+          <div class="boisson-info">
+            <div class="boisson-icon alcool"><i class="fas fa-beer"></i></div>
+            <span class="boisson-name">Chill</span>
+          </div>
+          <span class="boisson-price">1 000 F</span>
+        </div>
+
+        <div class="boisson-card">
+          <div class="boisson-info">
+            <div class="boisson-icon alcool"><i class="fas fa-beer"></i></div>
+            <span class="boisson-name">Dopel</span>
+          </div>
+          <span class="boisson-price">1 000 F</span>
+        </div>
+
+        <div class="boisson-card">
+          <div class="boisson-info">
+            <div class="boisson-icon alcool"><i class="fas fa-beer"></i></div>
+            <span class="boisson-name">Beaufor</span>
+          </div>
+          <span class="boisson-price">1 000 F</span>
+        </div>
+
+        <div class="boisson-card">
+          <div class="boisson-info">
+            <div class="boisson-icon alcool"><i class="fas fa-beer"></i></div>
+            <span class="boisson-name">Guinness 33cl</span>
+          </div>
+          <span class="boisson-price">1 000 F</span>
+        </div>
+
+        <div class="boisson-card">
+          <div class="boisson-info">
+            <div class="boisson-icon alcool"><i class="fas fa-beer"></i></div>
+            <span class="boisson-name">Guinness 66cl</span>
+          </div>
+          <span class="boisson-price">1 500 F</span>
+        </div>
+
+        <div class="boisson-card">
+          <div class="boisson-info">
+            <div class="boisson-icon alcool"><i class="fas fa-beer"></i></div>
+            <span class="boisson-name">Desperado</span>
+          </div>
+          <span class="boisson-price">1 000 F</span>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ====== CATÉGORIE : SUCRERIES ====== -->
+    <section class="menu-category" data-cat="sucrerie">
+      <div class="category-header">
+        <div class="category-icon jaune"><i class="fas fa-glass-water"></i></div>
+        <div class="category-title">
+          <h2>Boissons sucrées</h2>
+          <p>Sodas et boissons énergisantes</p>
+        </div>
+      </div>
+
+      <div class="boissons-grid">
+
+        <div class="boisson-card">
+          <div class="boisson-info">
+            <div class="boisson-icon sucre"><i class="fas fa-wine-glass"></i></div>
+            <span class="boisson-name">Malta</span>
+          </div>
+          <span class="boisson-price">1 000 F</span>
+        </div>
+
+        <div class="boisson-card">
+          <div class="boisson-info">
+            <div class="boisson-icon sucre"><i class="fas fa-wine-glass"></i></div>
+            <span class="boisson-name">Fanta</span>
+          </div>
+          <span class="boisson-price">1 000 F</span>
+        </div>
+
+        <div class="boisson-card">
+          <div class="boisson-info">
+            <div class="boisson-icon sucre"><i class="fas fa-wine-glass"></i></div>
+            <span class="boisson-name">Coca Cola</span>
+          </div>
+          <span class="boisson-price">1 000 F</span>
+        </div>
+
+        <div class="boisson-card">
+          <div class="boisson-info">
+            <div class="boisson-icon sucre"><i class="fas fa-wine-glass"></i></div>
+            <span class="boisson-name">XL</span>
+          </div>
+          <span class="boisson-price">1 000 F</span>
+        </div>
+
+        <div class="boisson-card">
+          <div class="boisson-info">
+            <div class="boisson-icon sucre"><i class="fas fa-bolt"></i></div>
+            <span class="boisson-name">Dopel Energy</span>
+          </div>
+          <span class="boisson-price">1 000 F</span>
+        </div>
+
+        <div class="boisson-card">
+          <div class="boisson-info">
+            <div class="boisson-icon sucre"><i class="fas fa-wine-glass"></i></div>
+            <span class="boisson-name">Yousou</span>
+          </div>
+          <span class="boisson-price">1 000 F</span>
+        </div>
+
+      </div>
+    </section>
+
+  </div>
+</main>
+
+<!-- CTA FINAL -->
+<section style="background:linear-gradient(135deg,var(--vert),var(--vert-fonce));color:white;text-align:center;padding:4rem 1.25rem">
+  <div class="wrap">
+    <h2 style="color:white;margin-bottom:1rem">Prêt à passer commande ?</h2>
+    <p style="color:rgba(255,255,255,.9);max-width:600px;margin:0 auto 2rem">
+      Envoyez-nous votre commande directement sur WhatsApp. Nous préparons vos plats et vous prévenons dès qu'ils sont prêts.
+    </p>
+    <a href="https://wa.me/22646778462?text=Bonjour,%20je%20souhaite%20passer%20une%20commande%20!" class="btn btn-wa" style="padding:1rem 2rem;font-size:1rem" target="_blank" rel="noopener">
+      <i class="fab fa-whatsapp"></i> Commander sur WhatsApp
+    </a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="logo.png" alt="Espace Festicas Ibelina">
+        <h3>Espace Festicas Ibelina</h3>
+        <p>Restaurant · Jardin de détente · Espace événementiel à Banfora, Burkina Faso.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="#hero">Menu</a></li>
+          <li><a href="index.html#galerie">Galerie</a></li>
+          <li><a href="index.html#agenda">Agenda</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="tel:+22646778462">+226 46 77 84 62</a></li>
+          <li><a href="tel:+22669064848">+226 69 06 48 48</a></li>
+          <li><a href="mailto:espacefesticasibelina@gmail.com">espacefesticasibelina@gmail.com</a></li>
+          <li><span>Ouvert 7j/7 · 8h — 02h</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      © <span id="year"></span> <strong>Espace Festicas Ibelina</strong>. Tous droits réservés.
+    </div>
+  </div>
+</footer>
+
+<!-- BOUTON WHATSAPP FLOTTANT -->
+<a href="https://wa.me/22646778462?text=Bonjour%20Espace%20Festicas%20Ibelina%20!" id="whatsapp-float" target="_blank" rel="noopener" aria-label="WhatsApp">
+  <i class="fab fa-whatsapp"></i>
+  <span class="tooltip">Commandez !</span>
+</a>
+
+<script>
+'use strict';
+
+/* Année dynamique */
+document.getElementById('year').textContent = new Date().getFullYear();
+
+/* ========== FILTRES ========== */
+document.querySelectorAll('.filter-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    const cat = btn.dataset.category;
+
+    document.querySelectorAll('.menu-category').forEach(section => {
+      if (cat === 'all' || section.dataset.cat === cat) {
+        section.style.display = '';
+      } else {
+        section.style.display = 'none';
+      }
+    });
+  });
+});
+
+/* ========== SMOOTH SCROLL ========== */
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', function(e) {
+    const target = document.querySelector(this.getAttribute('href'));
+    if (target) {
+      e.preventDefault();
+      const top = target.getBoundingClientRect().top + window.scrollY - 80;
+      window.scrollTo({ top, behavior: 'smooth' });
+    }
+  });
+});
+</script>
+
+</body>
+</html>
