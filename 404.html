@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#1B5E20">
+<title>Page introuvable (404) — Espace Festicas Ibelina</title>
+
+<meta name="description" content="La page que vous recherchez n'existe pas ou a été déplacée. Retournez à l'accueil de l'Espace Festicas Ibelina à Banfora.">
+<meta name="robots" content="noindex, follow">
+<link rel="canonical" href="https://espacefesticasibelina.online/">
+
+<!-- Redirection automatique après 6 secondes -->
+<meta http-equiv="refresh" content="6;url=https://espacefesticasibelina.online/">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Espace Festicas Ibelina">
+<meta property="og:title" content="Page introuvable — Espace Festicas Ibelina">
+<meta property="og:description" content="Oups ! Cette page n'existe pas. Retour à l'accueil.">
+<meta property="og:url" content="https://espacefesticasibelina.online/404.html">
+
+<!-- Favicon -->
+<link rel="icon" type="image/png" href="logo.png">
+<link rel="apple-touch-icon" href="logo.png">
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<style>
+:root{
+  --vert:#1B5E20;
+  --vert-clair:#2E7D32;
+  --vert-fonce:#0d3a12;
+  --or:#F9A825;
+  --or-fonce:#C9A227;
+  --bleu:#0D47A1;
+  --creme:#FAF7F0;
+  --blanc:#ffffff;
+  --texte:#1a1a1a;
+  --texte-doux:#555;
+  --ombre-forte:0 15px 40px rgba(0,0,0,.18);
+  --transition:.35s cubic-bezier(.4,0,.2,1);
+}
+
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  font-family:'Poppins',system-ui,-apple-system,sans-serif;
+  color:var(--texte);
+  background:var(--creme);
+  line-height:1.6;
+  overflow-x:hidden;
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
+  -webkit-font-smoothing:antialiased;
+}
+h1,h2,h3{font-family:'Playfair Display',Georgia,serif;line-height:1.2}
+img{max-width:100%;display:block;height:auto}
+a{color:inherit;text-decoration:none}
+button{font:inherit;cursor:pointer;border:none;background:none}
+
+/* ============ HEADER SIMPLE ============ */
+.header-404{
+  padding:18px 24px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:var(--blanc);
+  box-shadow:0 2px 20px rgba(0,0,0,.06);
+  position:relative;
+  z-index:10;
+}
+.logo-block{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  transition:var(--transition);
+}
+.logo-block:hover{transform:scale(1.03)}
+.logo-block img{
+  height:52px;
+  width:auto;
+  object-fit:contain;
+}
+.logo-text{
+  display:flex;
+  flex-direction:column;
+  line-height:1.1;
+}
+.logo-text .name{
+  font-family:'Playfair Display',serif;
+  font-weight:800;
+  font-size:1.15rem;
+  color:var(--vert);
+  letter-spacing:.5px;
+}
+.logo-text .sub{
+  font-size:.68rem;
+  text-transform:uppercase;
+  letter-spacing:2.5px;
+  color:var(--or-fonce);
+  font-weight:600;
+}
+
+/* ============ SECTION 404 ============ */
+.main-404{
+  flex:1;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:40px 20px 60px;
+  position:relative;
+  overflow:hidden;
+  background:linear-gradient(135deg,#f7f9f6 0%,var(--creme) 40%,#f2ede2 100%);
+}
+.main-404::before{
+  content:'';
+  position:absolute;
+  top:-150px;right:-150px;
+  width:450px;height:450px;
+  background:radial-gradient(circle,rgba(27,94,32,.08),transparent 70%);
+  border-radius:50%;
+  animation:float 8s ease-in-out infinite;
+}
+.main-404::after{
+  content:'';
+  position:absolute;
+  bottom:-150px;left:-150px;
+  width:400px;height:400px;
+  background:radial-gradient(circle,rgba(249,168,37,.10),transparent 70%);
+  border-radius:50%;
+  animation:float 10s ease-in-out infinite reverse;
+}
+@keyframes float{
+  0%,100%{transform:translateY(0) scale(1)}
+  50%{transform:translateY(-25px) scale(1.05)}
+}
+
+.content-404{
+  max-width:680px;
+  width:100%;
+  text-align:center;
+  position:relative;
+  z-index:2;
+  background:rgba(255,255,255,.75);
+  backdrop-filter:blur(12px);
+  -webkit-backdrop-filter:blur(12px);
+  border:1px solid rgba(255,255,255,.9);
+  border-radius:24px;
+  padding:50px 32px;
+  box-shadow:var(--ombre-forte);
+  animation:fadeUp 1s ease both;
+}
+@keyframes fadeUp{
+  from{opacity:0;transform:translateY(30px)}
+  to{opacity:1;transform:translateY(0)}
+}
+
+/* Logo dans la carte */
+.logo-404{
+  width:110px;
+  height:110px;
+  object-fit:contain;
+  margin:0 auto 24px;
+  filter:drop-shadow(0 8px 24px rgba(27,94,32,.25));
+  animation:float 4s ease-in-out infinite;
+}
+
+/* Le grand 404 */
+.error-code{
+  font-family:'Playfair Display',serif;
+  font-weight:800;
+  font-size:clamp(6rem,22vw,11rem);
+  line-height:.9;
+  letter-spacing:-4px;
+  background:linear-gradient(135deg,var(--vert) 0%,var(--vert-clair) 40%,var(--or) 100%);
+  -webkit-background-clip:text;
+  background-clip:text;
+  -webkit-text-fill-color:transparent;
+  color:transparent;
+  margin-bottom:8px;
+  position:relative;
+  display:inline-block;
+}
+.error-code::after{
+  content:'404';
+  position:absolute;
+  inset:0;
+  background:linear-gradient(135deg,var(--vert) 0%,var(--or) 100%);
+  -webkit-background-clip:text;
+  background-clip:text;
+  -webkit-text-fill-color:transparent;
+  color:transparent;
+  opacity:0;
+  filter:blur(20px);
+  z-index:-1;
+}
+
+/* Séparateur */
+.divider-404{
+  width:80px;
+  height:3px;
+  background:linear-gradient(90deg,var(--or),var(--vert));
+  margin:8px auto 24px;
+  border-radius:3px;
+}
+
+.content-404 h1{
+  font-size:clamp(1.5rem,4vw,2.1rem);
+  color:var(--vert);
+  margin-bottom:14px;
+  font-weight:800;
+}
+.content-404 p{
+  color:var(--texte-doux);
+  font-size:1rem;
+  margin-bottom:12px;
+  max-width:520px;
+  margin-left:auto;
+  margin-right:auto;
+}
+.content-404 p.lead{
+  font-size:1.05rem;
+  color:var(--texte);
+  font-weight:500;
+}
+
+/* Barre de progression redirection */
+.redirect-box{
+  margin:28px auto 24px;
+  max-width:420px;
+  background:rgba(27,94,32,.06);
+  border:1px solid rgba(27,94,32,.15);
+  border-radius:14px;
+  padding:16px 20px;
+}
+.redirect-box .label{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+  font-size:.85rem;
+  color:var(--vert);
+  font-weight:600;
+  margin-bottom:10px;
+}
+.redirect-box .label i{
+  color:var(--or);
+  animation:spin 2s linear infinite;
+}
+@keyframes spin{
+  from{transform:rotate(0deg)}
+  to{transform:rotate(360deg)}
+}
+.progress-bar{
+  width:100%;
+  height:6px;
+  background:rgba(27,94,32,.12);
+  border-radius:6px;
+  overflow:hidden;
+  position:relative;
+}
+.progress-bar::after{
+  content:'';
+  position:absolute;
+  top:0;left:0;
+  height:100%;
+  width:0%;
+  background:linear-gradient(90deg,var(--or),var(--vert));
+  border-radius:6px;
+  animation:progress 6s linear forwards;
+}
+@keyframes progress{
+  from{width:0%}
+  to{width:100%}
+}
+.redirect-box .counter{
+  margin-top:8px;
+  font-size:.78rem;
+  color:var(--texte-doux);
+}
+.redirect-box .counter strong{
+  color:var(--or-fonce);
+  font-weight:700;
+}
+
+/* Boutons */
+.actions-404{
+  display:flex;
+  gap:12px;
+  justify-content:center;
+  flex-wrap:wrap;
+  margin-top:8px;
+}
+.btn{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  padding:13px 26px;
+  border-radius:50px;
+  font-weight:600;
+  font-size:.92rem;
+  transition:var(--transition);
+  white-space:nowrap;
+  letter-spacing:.3px;
+}
+.btn-primary{
+  background:var(--vert);
+  color:var(--blanc);
+  box-shadow:0 8px 24px rgba(27,94,32,.28);
+}
+.btn-primary:hover{
+  background:var(--vert-fonce);
+  transform:translateY(-3px);
+  box-shadow:0 12px 30px rgba(27,94,32,.4);
+}
+.btn-outline{
+  background:transparent;
+  color:var(--vert);
+  border:2px solid var(--vert);
+}
+.btn-outline:hover{
+  background:var(--vert);
+  color:var(--blanc);
+  transform:translateY(-3px);
+}
+
+/* Liens rapides */
+.quick-links{
+  margin-top:32px;
+  padding-top:24px;
+  border-top:1px solid rgba(0,0,0,.08);
+}
+.quick-links .ql-title{
+  font-size:.78rem;
+  text-transform:uppercase;
+  letter-spacing:2px;
+  color:var(--texte-doux);
+  font-weight:600;
+  margin-bottom:14px;
+}
+.quick-links .ql-list{
+  display:flex;
+  gap:8px;
+  justify-content:center;
+  flex-wrap:wrap;
+}
+.quick-links a{
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
+  padding:8px 16px;
+  border-radius:50px;
+  background:var(--blanc);
+  border:1px solid rgba(0,0,0,.08);
+  font-size:.82rem;
+  font-weight:500;
+  color:var(--texte);
+  transition:var(--transition);
+}
+.quick-links a:hover{
+  background:var(--or);
+  color:var(--vert-fonce);
+  border-color:var(--or);
+  transform:translateY(-2px);
+}
+.quick-links a i{
+  color:var(--or-fonce);
+  font-size:.85rem;
+  transition:var(--transition);
+}
+.quick-links a:hover i{color:var(--vert)}
+
+/* Contact info */
+.contact-strip{
+  margin-top:26px;
+  display:flex;
+  gap:18px;
+  justify-content:center;
+  flex-wrap:wrap;
+  font-size:.82rem;
+  color:var(--texte-doux);
+}
+.contact-strip span{
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
+}
+.contact-strip i{color:var(--or-fonce)}
+
+/* ============ FOOTER ============ */
+.footer-404{
+  background:var(--vert-fonce);
+  color:rgba(255,255,255,.7);
+  padding:22px 20px;
+  text-align:center;
+  font-size:.82rem;
+}
+.footer-404 strong{color:var(--or)}
+.footer-404 a{color:var(--or);transition:var(--transition)}
+.footer-404 a:hover{text-decoration:underline}
+
+/* ============ RESPONSIVE ============ */
+@media(max-width:520px){
+  .header-404{padding:14px 16px}
+  .logo-block img{height:44px}
+  .logo-text .name{font-size:1rem}
+  .logo-text .sub{font-size:.6rem;letter-spacing:2px}
+  .content-404{padding:36px 22px;border-radius:20px}
+  .logo-404{width:88px;height:88px;margin-bottom:18px}
+  .error-code{letter-spacing:-2px}
+  .content-404 p{font-size:.92rem}
+  .content-404 p.lead{font-size:.98rem}
+  .btn{padding:12px 22px;font-size:.88rem}
+  .actions-404{gap:10px}
+  .quick-links a{padding:7px 13px;font-size:.78rem}
+  .redirect-box{padding:14px 16px}
+}
+
+@media(max-width:360px){
+  .content-404{padding:28px 16px}
+  .error-code{font-size:5rem}
+  .actions-404 .btn{width:100%;justify-content:center}
+}
+
+/* Accessibilité : mouvement réduit */
+@media (prefers-reduced-motion: reduce){
+  *,*::before,*::after{
+    animation-duration:.01ms !important;
+    animation-iteration-count:1 !important;
+    transition-duration:.01ms !important;
+  }
+  .progress-bar::after{animation:none;width:100%}
+}
+</style>
+</head>
+<body>
+
+<!-- ============ HEADER ============ -->
+<header class="header-404">
+  <a href="https://espacefesticasibelina.online/" class="logo-block">
+    <img src="logo.png" alt="Logo Espace Festicas Ibelina" onerror="this.style.display='none'">
+    <div class="logo-text">
+      <span class="name">Festicas Ibelina</span>
+      <span class="sub">Banfora · Burkina Faso</span>
+    </div>
+  </a>
+</header>
+
+<!-- ============ CONTENU 404 ============ -->
+<main class="main-404">
+  <div class="content-404">
+
+    <img src="logo.png" alt="Espace Festicas Ibelina" class="logo-404" onerror="this.style.display='none'">
+
+    <div class="error-code">404</div>
+    <div class="divider-404"></div>
+
+    <h1>Oups, page introuvable</h1>
+    <p class="lead">
+      La page que vous recherchez semble avoir disparu… ou n'a jamais existé.
+    </p>
+    <p>
+      Pas d'inquiétude, vous serez redirigé automatiquement vers notre accueil dans quelques instants.
+    </p>
+
+    <!-- Barre de progression -->
+    <div class="redirect-box">
+      <div class="label">
+        <i class="fa-solid fa-circle-notch"></i>
+        Redirection en cours…
+      </div>
+      <div class="progress-bar"></div>
+      <div class="counter">
+        Redirection automatique dans <strong id="countdown">6</strong> seconde<span id="plural">s</span>
+      </div>
+    </div>
+
+    <!-- Boutons -->
+    <div class="actions-404">
+      <a href="https://espacefesticasibelina.online/" class="btn btn-primary">
+        <i class="fa-solid fa-house"></i> Retour à l'accueil
+      </a>
+      <a href="https://wa.me/22646778462?text=Bonjour%20Espace%20Festicas%20Ibelina" target="_blank" rel="noopener" class="btn btn-outline">
+        <i class="fa-brands fa-whatsapp"></i> Nous contacter
+      </a>
+    </div>
+
+    <!-- Liens rapides -->
+    <div class="quick-links">
+      <div class="ql-title">Accès rapide</div>
+      <div class="ql-list">
+        <a href="https://espacefesticasibelina.online/#services">
+          <i class="fa-solid fa-utensils"></i> Services
+        </a>
+        <a href="https://espacefesticasibelina.online/#menu">
+          <i class="fa-solid fa-book-open"></i> Menu
+        </a>
+        <a href="https://espacefesticasibelina.online/#galerie">
+          <i class="fa-solid fa-images"></i> Galerie
+        </a>
+        <a href="https://espacefesticasibelina.online/#calendrier">
+          <i class="fa-solid fa-calendar-days"></i> Agenda
+        </a>
+        <a href="https://espacefesticasibelina.online/#contact">
+          <i class="fa-solid fa-envelope"></i> Contact
+        </a>
+      </div>
+    </div>
+
+    <!-- Coordonnées -->
+    <div class="contact-strip">
+      <span><i class="fa-solid fa-location-dot"></i> Banfora, Burkina Faso</span>
+      <span><i class="fa-solid fa-clock"></i> Ouvert 7j/7 · 8h — 02h</span>
+      <span><i class="fa-solid fa-phone"></i> +226 46 77 84 62</span>
+    </div>
+
+  </div>
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer-404">
+  © <span id="year"></span> <strong>Espace Festicas Ibelina</strong> — Tous droits réservés ·
+  <a href="https://espacefesticasibelina.online/">espacefesticasibelina.online</a>
+</footer>
+
+<script>
+'use strict';
+
+/* Année dynamique */
+document.getElementById('year').textContent = new Date().getFullYear();
+
+/* ============ COMPTE À REBOURS DE REDIRECTION ============ */
+(function() {
+  const DURATION = 6; // secondes
+  const countdownEl = document.getElementById('countdown');
+  const pluralEl = document.getElementById('plural');
+  let remaining = DURATION;
+
+  const timer = setInterval(() => {
+    remaining--;
+
+    if (remaining <= 0) {
+      clearInterval(timer);
+      countdownEl.textContent = '0';
+      pluralEl.textContent = '';
+      // Redirection finale (sécurité si le meta refresh échoue)
+      window.location.href = 'https://espacefesticasibelina.online/';
+      return;
+    }
+
+    countdownEl.textContent = remaining;
+    pluralEl.textContent = remaining > 1 ? 's' : '';
+  }, 1000);
+})();
+</script>
+
+</body>
+</html>
