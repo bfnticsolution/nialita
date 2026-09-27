@@ -2,7 +2,7 @@
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <meta name="theme-color" content="#1B5E20">
 
 <!-- ===================== SEO PRINCIPAL ===================== -->
@@ -14,13 +14,13 @@
 <meta name="language" content="French">
 <meta name="geo.region" content="BF-01">
 <meta name="geo.placename" content="Banfora">
-<meta name="geo.position" content="10.6369;-4.7590">
-<meta name="ICBM" content="10.6369, -4.7590">
+<meta name="geo.position" content="10.648311;-4.788514">
+<meta name="ICBM" content="10.648311, -4.788514">
 
 <!-- ===================== CANONICAL ===================== -->
 <link rel="canonical" href="https://espacefesticasibelina.com/">
 
-<!-- ===================== OPEN GRAPH (WhatsApp, Facebook, LinkedIn) ===================== -->
+<!-- ===================== OPEN GRAPH ===================== -->
 <meta property="og:type" content="restaurant">
 <meta property="og:site_name" content="Espace Festicas Ibelina">
 <meta property="og:title" content="Espace Festicas Ibelina — Restaurant • Événements • Jardin à Banfora">
@@ -32,7 +32,7 @@
 <meta property="og:url" content="https://espacefesticasibelina.com/">
 <meta property="og:locale" content="fr_FR">
 
-<!-- ===================== TWITTER / X CARD ===================== -->
+<!-- ===================== TWITTER CARD ===================== -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Espace Festicas Ibelina — Restaurant à Banfora">
 <meta name="twitter:description" content="Restaurant, événements & jardin de détente à Banfora. Ouverture 27/09/2026.">
@@ -71,8 +71,8 @@
   },
   "geo": {
     "@type": "GeoCoordinates",
-    "latitude": 10.6369,
-    "longitude": -4.7590
+    "latitude": 10.648311,
+    "longitude": -4.788514
   },
   "openingHoursSpecification": [{
     "@type": "OpeningHoursSpecification",
@@ -89,12 +89,12 @@
 
 <style>
 /* =========================================================
-   VARIABLES
+   VARIABLES & RESET
    ========================================================= */
 :root{
   --vert:#1B5E20;
   --vert-clair:#2E7D32;
-  --vert-fonce:#145ece;
+  --vert-fonce:#0d3a12;
   --or:#F9A825;
   --or-fonce:#C9A227;
   --bleu:#0D47A1;
@@ -107,23 +107,25 @@
   --ombre-forte:0 15px 40px rgba(0,0,0,.18);
   --rayon:14px;
   --transition:.35s cubic-bezier(.4,0,.2,1);
+  --header-h:72px;
 }
 
-/* ============ RESET ============ */
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;scroll-padding-top:var(--header-h)}
 body{
-  font-family:'Poppins',system-ui,sans-serif;
+  font-family:'Poppins',system-ui,-apple-system,sans-serif;
   color:var(--texte);
   background:var(--creme);
   line-height:1.6;
   overflow-x:hidden;
+  -webkit-font-smoothing:antialiased;
 }
 h1,h2,h3,h4{font-family:'Playfair Display',Georgia,serif;line-height:1.2}
-img{max-width:100%;display:block}
+img{max-width:100%;display:block;height:auto}
 a{color:inherit;text-decoration:none}
 button{font:inherit;cursor:pointer;border:none;background:none}
 ul{list-style:none}
+iframe{border:0}
 
 /* ============ ANIMATIONS ============ */
 .reveal{opacity:0;transform:translateY(40px);transition:opacity .8s ease, transform .8s ease}
@@ -144,6 +146,8 @@ ul{list-style:none}
 @keyframes kenburns{0%{transform:scale(1) translate(0,0)}100%{transform:scale(1.15) translate(-2%,-2%)}}
 @keyframes pulseRing{0%{box-shadow:0 0 0 0 rgba(37,211,102,.6)}70%{box-shadow:0 0 0 18px rgba(37,211,102,0)}100%{box-shadow:0 0 0 0 rgba(37,211,102,0)}}
 @keyframes ticker{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+@keyframes loaderLogo{0%{transform:scale(1) rotate(-3deg)}100%{transform:scale(1.08) rotate(3deg)}}
+@keyframes loaderBar{0%{transform:translateX(-100%)}100%{transform:translateX(300%)}}
 
 /* ============ PRELOADER ============ */
 #preloader{
@@ -159,10 +163,9 @@ ul{list-style:none}
   filter:drop-shadow(0 15px 40px rgba(249,168,37,.5));
 }
 #preloader .loader-name{
-  margin-top:24px;
-  font-family:'Playfair Display',serif;
-  font-weight:800;font-size:1.3rem;
-  color:var(--or);letter-spacing:3px;text-transform:uppercase;
+  margin-top:24px;font-family:'Playfair Display',serif;
+  font-weight:800;font-size:1.3rem;color:var(--or);
+  letter-spacing:3px;text-transform:uppercase;
   animation:fadeUp 1s ease .4s both;
 }
 #preloader .loader-bar{
@@ -172,16 +175,7 @@ ul{list-style:none}
 #preloader .loader-bar::after{
   content:'';display:block;height:100%;width:40%;
   background:linear-gradient(90deg,var(--or),#ffd45e);
-  border-radius:3px;
-  animation:loaderBar 1.4s ease-in-out infinite;
-}
-@keyframes loaderLogo{
-  0%{transform:scale(1) rotate(-3deg)}
-  100%{transform:scale(1.08) rotate(3deg)}
-}
-@keyframes loaderBar{
-  0%{transform:translateX(-100%)}
-  100%{transform:translateX(300%)}
+  border-radius:3px;animation:loaderBar 1.4s ease-in-out infinite;
 }
 
 /* ============ HEADER ============ */
@@ -195,6 +189,7 @@ ul{list-style:none}
 .header.scrolled{
   background:rgba(250,247,240,.96);
   backdrop-filter:blur(10px);
+  -webkit-backdrop-filter:blur(10px);
   box-shadow:0 2px 20px rgba(0,0,0,.08);
   padding:8px 20px;
 }
@@ -241,11 +236,11 @@ ul{list-style:none}
 
 /* ============ HERO ============ */
 .hero{
-  position:relative;min-height:100vh;
+  position:relative;min-height:100vh;min-height:100dvh;
   display:flex;align-items:center;justify-content:center;
   text-align:center;color:var(--blanc);
-  overflow:hidden;
-  background:var(--vert-fonce);
+  overflow:hidden;background:var(--vert-fonce);
+  padding:calc(var(--header-h) + 20px) 20px 60px;
 }
 .hero-bg{
   position:absolute;inset:0;
@@ -257,22 +252,23 @@ ul{list-style:none}
   content:'';position:absolute;inset:0;
   background:linear-gradient(180deg,rgba(13,58,18,.75) 0%,rgba(13,58,18,.55) 50%,rgba(13,58,18,.9) 100%);
 }
-.hero-content{position:relative;z-index:2;padding:0 24px;max-width:900px;animation:fadeUp 1.2s ease .2s both}
+.hero-content{position:relative;z-index:2;padding:0 16px;max-width:900px;animation:fadeUp 1.2s ease .2s both;width:100%}
 .hero-logo{
-  width:170px;height:170px;object-fit:contain;margin:0 auto 24px;
+  width:clamp(110px,22vw,170px);height:auto;object-fit:contain;margin:0 auto 24px;
   filter:drop-shadow(0 10px 30px rgba(0,0,0,.5));
   animation:logoIn 1.4s cubic-bezier(.34,1.56,.64,1) both;
 }
-.hero h1{font-size:clamp(2rem,7vw,4rem);font-weight:800;letter-spacing:.5px;margin-bottom:14px;text-shadow:0 4px 20px rgba(0,0,0,.4)}
+.hero h1{font-size:clamp(1.8rem,7vw,4rem);font-weight:800;letter-spacing:.5px;margin-bottom:14px;text-shadow:0 4px 20px rgba(0,0,0,.4)}
 .hero h1 .accent{color:var(--or)}
-.hero .tagline{font-size:clamp(1rem,2.5vw,1.25rem);font-weight:300;letter-spacing:3px;text-transform:uppercase;color:var(--or);margin-bottom:20px;animation:fadeUp 1s ease .6s both}
-.hero p.lead{font-size:1.05rem;max-width:620px;margin:0 auto 26px;opacity:.95;animation:fadeUp 1s ease .8s both}
+.hero .tagline{font-size:clamp(.8rem,2.5vw,1.25rem);font-weight:300;letter-spacing:2px;text-transform:uppercase;color:var(--or);margin-bottom:20px;animation:fadeUp 1s ease .6s both}
+.hero p.lead{font-size:clamp(.9rem,2vw,1.05rem);max-width:620px;margin:0 auto 26px;opacity:.95;animation:fadeUp 1s ease .8s both}
 .hero-buttons{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;animation:fadeUp 1s ease 1s both}
 
 .btn{
   display:inline-flex;align-items:center;gap:8px;
   padding:14px 30px;border-radius:50px;font-weight:600;font-size:.95rem;
   transition:var(--transition);letter-spacing:.3px;position:relative;overflow:hidden;
+  white-space:nowrap;
 }
 .btn-primary{background:var(--or);color:var(--vert);box-shadow:0 8px 24px rgba(249,168,37,.35)}
 .btn-primary:hover{transform:translateY(-3px);box-shadow:0 12px 30px rgba(249,168,37,.5);background:#ffb733}
@@ -284,7 +280,7 @@ ul{list-style:none}
   margin:22px auto 0;
   max-width:520px;
   background:rgba(0,0,0,.35);
-  backdrop-filter:blur(8px);
+  backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);
   border:1px solid rgba(249,168,37,.4);
   border-radius:14px;
   padding:14px 20px;
@@ -302,7 +298,7 @@ ul{list-style:none}
 }
 .cd-unit strong{
   display:block;font-family:'Playfair Display',serif;
-  font-size:1.5rem;color:var(--or);line-height:1;font-weight:800;
+  font-size:clamp(1.1rem,3vw,1.5rem);color:var(--or);line-height:1;font-weight:800;
 }
 .cd-unit span{font-size:.6rem;letter-spacing:1px;text-transform:uppercase;opacity:.85}
 
@@ -310,13 +306,13 @@ ul{list-style:none}
 .scroll-indicator::after{content:'';display:block;width:1px;height:30px;background:var(--or);margin:8px auto 0}
 
 /* ============ SECTIONS ============ */
-section{padding:80px 20px;position:relative}
-.container{max-width:1180px;margin:0 auto}
-.section-title{text-align:center;margin-bottom:50px}
+section{padding:70px 16px;position:relative}
+.container{max-width:1180px;margin:0 auto;width:100%}
+.section-title{text-align:center;margin-bottom:44px}
 .section-title .kicker{color:var(--or-fonce);font-size:.8rem;letter-spacing:4px;text-transform:uppercase;font-weight:600;display:block;margin-bottom:10px}
-.section-title h2{font-size:clamp(1.8rem,4.5vw,2.8rem);color:var(--vert);margin-bottom:14px}
+.section-title h2{font-size:clamp(1.6rem,4.5vw,2.8rem);color:var(--vert);margin-bottom:14px}
 .section-title .sep{width:70px;height:3px;background:linear-gradient(90deg,var(--or),var(--bleu));margin:0 auto;border-radius:3px}
-.section-title p{max-width:640px;margin:16px auto 0;color:var(--texte-doux)}
+.section-title p{max-width:640px;margin:16px auto 0;color:var(--texte-doux);font-size:.95rem}
 
 /* ============ ACTUALITÉS ============ */
 .actualites{background:var(--blanc)}
@@ -331,36 +327,65 @@ section{padding:80px 20px;position:relative}
 .ticker-track span{font-size:.9rem;opacity:.95}
 .ticker-track span::before{content:'◆';color:var(--or);margin-right:14px}
 
-.news-grid{display:grid;gap:24px;grid-template-columns:1fr}
-.news-card{
+/* ============ CARROUSEL ACTUALITÉS ============ */
+.news-carousel-wrapper{position:relative;overflow:hidden;border-radius:var(--rayon);padding:4px}
+.news-carousel{
+  display:flex;gap:20px;
+  transition:transform .5s cubic-bezier(.4,0,.2,1);
+  will-change:transform;
+}
+.news-carousel .news-card{
+  flex:0 0 calc(100% - 0px);
+  min-width:0;
   background:var(--creme);border-radius:var(--rayon);overflow:hidden;
   transition:var(--transition);border:1px solid rgba(0,0,0,.05);
   position:relative;
 }
-.news-card:hover{transform:translateY(-8px);box-shadow:var(--ombre-forte)}
-.news-card .thumb{
+.news-carousel .news-card:hover{transform:translateY(-8px);box-shadow:var(--ombre-forte)}
+.news-carousel .news-card .thumb{
   height:200px;position:relative;overflow:hidden;
   background:var(--vert-fonce);
 }
-.news-card .thumb img{
+.news-carousel .news-card .thumb img{
   width:100%;height:100%;object-fit:cover;
   transition:transform .8s cubic-bezier(.4,0,.2,1);
 }
-.news-card:hover .thumb img{transform:scale(1.1)}
-.news-card .thumb::after{
+.news-carousel .news-card:hover .thumb img{transform:scale(1.1)}
+.news-carousel .news-card .thumb::after{
   content:'';position:absolute;inset:0;
   background:linear-gradient(180deg,transparent 40%,rgba(13,58,18,.7) 100%);
 }
-.news-card .date-badge{
+.news-carousel .news-card .date-badge{
   position:absolute;top:14px;left:14px;z-index:2;
   background:var(--or);color:var(--vert);
   padding:8px 14px;border-radius:8px;
   font-weight:700;font-size:.72rem;text-transform:uppercase;
   letter-spacing:1px;box-shadow:0 4px 12px rgba(0,0,0,.2);
 }
-.news-card .body{padding:22px}
-.news-card h3{color:var(--vert);font-size:1.15rem;margin-bottom:8px}
-.news-card p{font-size:.9rem;color:var(--texte-doux)}
+.news-carousel .news-card .body{padding:22px}
+.news-carousel .news-card h3{color:var(--vert);font-size:1.15rem;margin-bottom:8px}
+.news-carousel .news-card p{font-size:.9rem;color:var(--texte-doux)}
+
+.carousel-nav{
+  display:flex;justify-content:center;gap:10px;margin-top:24px;
+}
+.carousel-nav button{
+  width:44px;height:44px;border-radius:50%;
+  background:var(--vert);color:var(--blanc);
+  display:flex;align-items:center;justify-content:center;
+  transition:var(--transition);
+  font-size:1rem;
+}
+.carousel-nav button:hover{background:var(--or);color:var(--vert);transform:scale(1.1)}
+.carousel-dots{
+  display:flex;justify-content:center;gap:8px;margin-top:16px;
+}
+.carousel-dots .dot{
+  width:10px;height:10px;border-radius:50%;
+  background:rgba(27,94,32,.25);
+  transition:var(--transition);cursor:pointer;
+}
+.carousel-dots .dot.active{background:var(--or);width:28px;border-radius:5px}
 
 /* ============ SERVICES ============ */
 .services{background:var(--creme)}
@@ -406,44 +431,45 @@ section{padding:80px 20px;position:relative}
 
 /* ============ MENU APERÇU ============ */
 .menu-preview{background:var(--blanc)}
-.dishes{display:grid;gap:20px;grid-template-columns:1fr}
+.dishes{display:grid;gap:16px;grid-template-columns:repeat(2,1fr)}
 .dish{
   background:var(--creme);border-radius:var(--rayon);overflow:hidden;
   display:flex;flex-direction:column;transition:var(--transition);cursor:pointer;
   position:relative;
 }
 .dish:hover{transform:translateY(-6px);box-shadow:var(--ombre-forte)}
-.dish-img{height:190px;overflow:hidden;background:var(--vert-fonce);position:relative}
+.dish-img{height:150px;overflow:hidden;background:var(--vert-fonce);position:relative}
 .dish-img img{width:100%;height:100%;object-fit:cover;transition:transform .7s ease}
 .dish:hover .dish-img img{transform:scale(1.12)}
 .dish-img .price-tag{
-  position:absolute;bottom:12px;right:12px;
+  position:absolute;bottom:10px;right:10px;
   background:var(--or);color:var(--vert);
-  padding:6px 12px;border-radius:8px;
-  font-weight:700;font-size:.85rem;
+  padding:5px 10px;border-radius:8px;
+  font-weight:700;font-size:.78rem;
   box-shadow:0 4px 12px rgba(0,0,0,.25);
 }
-.dish-info{padding:18px 20px}
-.dish-info h4{color:var(--vert);font-family:'Playfair Display',serif;font-size:1.1rem;margin-bottom:6px}
-.dish-info p{font-size:.85rem;color:var(--texte-doux)}
+.dish-info{padding:14px 16px}
+.dish-info h4{color:var(--vert);font-family:'Playfair Display',serif;font-size:1rem;margin-bottom:6px}
+.dish-info p{font-size:.8rem;color:var(--texte-doux);line-height:1.4}
 .menu-cta{text-align:center;margin-top:44px}
 .menu-cta .btn-primary{font-size:1rem}
 
 /* ============ PRÉSENTATION ============ */
 .presentation{background:linear-gradient(135deg,#0d3a12 0%,var(--vert) 100%);color:var(--blanc)}
 .presentation .container{display:grid;gap:40px;grid-template-columns:1fr;align-items:center}
-.presentation .text h2{color:var(--blanc);font-size:clamp(1.7rem,4vw,2.5rem);margin-bottom:20px}
+.presentation .text h2{color:var(--blanc);font-size:clamp(1.5rem,4vw,2.5rem);margin-bottom:20px}
 .presentation .text h2 .accent{color:var(--or)}
-.presentation .text p{margin-bottom:16px;opacity:.92;font-size:.98rem}
-.presentation .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:30px}
-.stat{text-align:center;padding:20px 10px;background:rgba(255,255,255,.06);border-radius:var(--rayon);border:1px solid rgba(249,168,37,.25)}
-.stat strong{display:block;font-family:'Playfair Display',serif;font-size:1.8rem;color:var(--or);font-weight:800}
-.stat span{font-size:.75rem;letter-spacing:1px;text-transform:uppercase;opacity:.85}
+.presentation .text p{margin-bottom:16px;opacity:.92;font-size:.95rem}
+.presentation .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:30px}
+.stat{text-align:center;padding:16px 8px;background:rgba(255,255,255,.06);border-radius:var(--rayon);border:1px solid rgba(249,168,37,.25)}
+.stat strong{display:block;font-family:'Playfair Display',serif;font-size:clamp(1.2rem,3vw,1.8rem);color:var(--or);font-weight:800}
+.stat span{font-size:.7rem;letter-spacing:1px;text-transform:uppercase;opacity:.85}
 
 .presentation .visual{
   aspect-ratio:1/1;border-radius:var(--rayon);
   overflow:hidden;position:relative;
   box-shadow:0 20px 50px rgba(0,0,0,.35);
+  max-width:500px;margin:0 auto;width:100%;
 }
 .presentation .visual img{width:100%;height:100%;object-fit:cover}
 .presentation .visual::after{
@@ -451,18 +477,24 @@ section{padding:80px 20px;position:relative}
   background:radial-gradient(circle at 30% 30%,rgba(249,168,37,.15),transparent 60%);
 }
 
-/* ============ GALERIE ============ */
+/* ============ GALERIE CARROUSEL ============ */
 .galerie{background:var(--creme)}
-.gallery-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
-.gallery-item{
+.gallery-carousel-wrapper{position:relative;overflow:hidden;border-radius:var(--rayon);padding:4px}
+.gallery-carousel{
+  display:flex;gap:14px;
+  transition:transform .5s cubic-bezier(.4,0,.2,1);
+  will-change:transform;
+}
+.gallery-carousel .gallery-item{
+  flex:0 0 calc(100% - 0px);
   aspect-ratio:1/1;border-radius:12px;overflow:hidden;position:relative;
   cursor:pointer;transition:var(--transition);
   background:var(--vert-fonce);
+  min-width:0;
 }
-.gallery-item img{width:100%;height:100%;object-fit:cover;transition:transform .8s cubic-bezier(.4,0,.2,1)}
-.gallery-item:hover{transform:scale(1.02);z-index:2;box-shadow:var(--ombre-forte)}
-.gallery-item:hover img{transform:scale(1.15)}
-.gallery-item::after{
+.gallery-carousel .gallery-item img{width:100%;height:100%;object-fit:cover;transition:transform .8s cubic-bezier(.4,0,.2,1)}
+.gallery-carousel .gallery-item:hover img{transform:scale(1.15)}
+.gallery-carousel .gallery-item::after{
   content:'\f00e';
   font-family:'Font Awesome 6 Free';font-weight:900;
   position:absolute;inset:0;
@@ -471,45 +503,39 @@ section{padding:80px 20px;position:relative}
   opacity:0;transition:var(--transition);
   font-size:1.8rem;color:var(--or);
 }
-.gallery-item:hover::after{opacity:1}
+.gallery-carousel .gallery-item:hover::after{opacity:1}
 
 /* ============ VIDÉO ============ */
 .video-section{background:var(--blanc)}
 .video-wrapper{
   max-width:900px;margin:0 auto;aspect-ratio:16/9;border-radius:var(--rayon);
   overflow:hidden;box-shadow:var(--ombre-forte);position:relative;
-  background:linear-gradient(135deg,var(--vert),var(--bleu));
-  display:flex;align-items:center;justify-content:center;color:var(--blanc);
-  text-align:center;padding:20px;
+  background:#000;
 }
-.video-wrapper .play-icon{
-  width:80px;height:80px;border-radius:50%;background:var(--or);color:var(--vert);
-  display:flex;align-items:center;justify-content:center;font-size:1.8rem;
-  margin:0 auto 16px;cursor:pointer;transition:var(--transition);
-  box-shadow:0 10px 30px rgba(249,168,37,.4);
+.video-wrapper iframe,
+.video-wrapper video{
+  width:100%;height:100%;display:block;border:0;
 }
-.video-wrapper .play-icon:hover{transform:scale(1.1)}
-.video-wrapper p{font-size:.9rem;opacity:.85;max-width:400px;margin:0 auto}
 
 /* ============ CALENDRIER ============ */
 .calendrier{background:var(--creme)}
-.calendar-box{background:var(--blanc);border-radius:var(--rayon);padding:26px;box-shadow:var(--ombre);max-width:900px;margin:0 auto}
+.calendar-box{background:var(--blanc);border-radius:var(--rayon);padding:20px;box-shadow:var(--ombre);max-width:900px;margin:0 auto}
 .calendar-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:20px;flex-wrap:wrap;gap:12px}
-.calendar-header h3{color:var(--vert);font-size:1.3rem;text-transform:capitalize}
+.calendar-header h3{color:var(--vert);font-size:1.15rem;text-transform:capitalize}
 .calendar-nav{display:flex;gap:8px}
 .calendar-nav button{width:38px;height:38px;border-radius:50%;background:var(--creme);color:var(--vert);font-weight:700;transition:var(--transition);display:flex;align-items:center;justify-content:center}
 .calendar-nav button:hover{background:var(--or);color:var(--vert)}
-.calendar-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:6px;margin-bottom:20px}
-.calendar-grid .day-name{text-align:center;font-size:.72rem;font-weight:600;color:var(--texte-doux);padding:8px 0;text-transform:uppercase;letter-spacing:1px}
+.calendar-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:4px;margin-bottom:20px}
+.calendar-grid .day-name{text-align:center;font-size:.65rem;font-weight:600;color:var(--texte-doux);padding:6px 0;text-transform:uppercase;letter-spacing:1px}
 .calendar-grid .day{
   aspect-ratio:1/1;display:flex;align-items:center;justify-content:center;
-  border-radius:8px;font-size:.85rem;cursor:pointer;transition:var(--transition);
+  border-radius:8px;font-size:.8rem;cursor:pointer;transition:var(--transition);
   background:var(--creme);position:relative;
 }
 .calendar-grid .day.other{opacity:.3}
 .calendar-grid .day:hover{background:var(--or);color:var(--vert);transform:scale(1.05)}
 .calendar-grid .day.today{background:var(--bleu);color:var(--blanc);font-weight:700}
-.calendar-grid .day.has-event::after{content:'';position:absolute;bottom:5px;width:5px;height:5px;border-radius:50%;background:var(--or)}
+.calendar-grid .day.has-event::after{content:'';position:absolute;bottom:4px;width:5px;height:5px;border-radius:50%;background:var(--or)}
 .calendar-grid .day.today.has-event::after{background:var(--or)}
 .events-list{display:flex;flex-direction:column;gap:12px}
 .event-item{display:flex;gap:14px;padding:14px;border-radius:10px;background:var(--creme);border-left:4px solid var(--or);transition:var(--transition)}
@@ -558,7 +584,7 @@ section{padding:80px 20px;position:relative}
 .contact-side .info-card p,.contact-side .info-card a{color:rgba(255,255,255,.9)}
 
 /* ============ FOOTER ============ */
-.footer{background:#026820;color:rgb(248, 250, 249);padding:50px 20px 20px;font-size:.88rem}
+.footer{background:#026820;color:rgb(248,250,249);padding:50px 20px 20px;font-size:.88rem}
 .footer-grid{display:grid;gap:30px;grid-template-columns:1fr;max-width:1180px;margin:0 auto 30px}
 .footer h4{color:var(--or);font-family:'Playfair Display',serif;font-size:1.05rem;margin-bottom:14px}
 .footer p,.footer a{color:rgba(255,255,255,.7);font-size:.85rem;line-height:1.9;display:block;transition:var(--transition)}
@@ -578,26 +604,90 @@ section{padding:80px 20px;position:relative}
 }
 .whatsapp-float:hover{transform:scale(1.1)}
 
-/* ============ RESPONSIVE ============ */
-@media (min-width:640px){
-  .news-grid{grid-template-columns:repeat(2,1fr)}
-  .services-grid{grid-template-columns:repeat(2,1fr)}
-  .dishes{grid-template-columns:repeat(2,1fr)}
-  .contact-info-grid{grid-template-columns:repeat(2,1fr)}
-  .gallery-grid{grid-template-columns:repeat(3,1fr)}
+/* ============ MEDIA QUERIES ============ */
+
+/* Très petits écrans */
+@media (max-width:359px){
+  .dishes{grid-template-columns:1fr}
+  .cd-unit strong{font-size:1rem}
+  .countdown{padding:10px 12px}
+  .hero-buttons .btn{padding:12px 20px;font-size:.85rem}
+  .stat strong{font-size:1.1rem}
 }
+
+/* Petits mobiles */
+@media (min-width:360px) and (max-width:479px){
+  .dishes{grid-template-columns:repeat(2,1fr)}
+  .dish-img{height:130px}
+  .dish-info{padding:12px}
+  .dish-info h4{font-size:.9rem}
+  .dish-info p{font-size:.75rem}
+}
+
+/* Mobiles */
+@media (min-width:480px){
+  section{padding:80px 20px}
+  .dishes{grid-template-columns:repeat(2,1fr)}
+  .dish-img{height:160px}
+  .news-carousel .news-card{flex:0 0 calc(100% - 0px)}
+  .gallery-carousel .gallery-item{flex:0 0 calc(50% - 7px)}
+  .contact-info-grid{grid-template-columns:repeat(2,1fr)}
+  .footer-grid{grid-template-columns:repeat(2,1fr)}
+}
+
+/* Tablettes */
+@media (min-width:640px){
+  section{padding:90px 28px}
+  .news-carousel .news-card{flex:0 0 calc(50% - 10px)}
+  .services-grid{grid-template-columns:repeat(2,1fr)}
+  .dishes{grid-template-columns:repeat(3,1fr)}
+  .gallery-carousel .gallery-item{flex:0 0 calc(33.333% - 10px)}
+  .contact-info-grid{grid-template-columns:repeat(2,1fr)}
+  .footer-grid{grid-template-columns:repeat(2,1fr)}
+  .presentation .stats{gap:16px}
+}
+
+/* Desktop */
 @media (min-width:900px){
+  :root{--header-h:80px}
   section{padding:100px 40px}
   .nav-desktop{display:flex}
   .burger{display:none}
-  .news-grid{grid-template-columns:repeat(3,1fr)}
+  .news-carousel .news-card{flex:0 0 calc(33.333% - 14px)}
   .services-grid{grid-template-columns:repeat(3,1fr)}
   .dishes{grid-template-columns:repeat(3,1fr)}
+  .dish-img{height:190px}
   .presentation .container{grid-template-columns:1.1fr 1fr;gap:60px}
   .contact-grid{grid-template-columns:1.2fr 1fr;gap:50px}
   .contact-info-grid{grid-template-columns:repeat(3,1fr)}
   .footer-grid{grid-template-columns:repeat(4,1fr)}
-  .gallery-grid{grid-template-columns:repeat(3,1fr);gap:18px}
+  .gallery-carousel .gallery-item{flex:0 0 calc(25% - 11px)}
+  .map-wrapper{height:450px}
+}
+
+/* Grands écrans */
+@media (min-width:1200px){
+  .container{max-width:1180px}
+  .news-carousel .news-card{flex:0 0 calc(33.333% - 14px)}
+  .gallery-carousel .gallery-item{flex:0 0 calc(25% - 11px)}
+}
+
+/* Très grands écrans */
+@media (min-width:1440px){
+  .container{max-width:1280px}
+}
+
+/* Orientation paysage sur mobile */
+@media (max-height:500px) and (orientation:landscape){
+  .hero{min-height:auto;padding:100px 20px 60px}
+  .hero-logo{width:80px}
+  .hero h1{font-size:1.6rem}
+  .countdown{display:none}
+}
+
+/* Réduction des animations */
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.01ms !important;animation-iteration-count:1 !important;transition-duration:.01ms !important;scroll-behavior:auto !important}
 }
 </style>
 </head>
@@ -701,37 +791,44 @@ section{padding:80px 20px;position:relative}
       <p>Restez informé de toutes les animations et soirées organisées dans notre espace.</p>
     </div>
 
-    <div class="news-grid stagger">
-      <article class="news-card">
-        <div class="thumb">
-          <img src="images/hero.jpg" alt="Ouverture officielle">
-          <span class="date-badge"><i class="fa-solid fa-star"></i> 27/09/2026</span>
-        </div>
-        <div class="body">
-          <h3>Ouverture officielle</h3>
-          <p>Célébration de l'ouverture officielle de l'Espace Festicas Ibelina. Programme spécial toute la journée.</p>
-        </div>
-      </article>
-      <article class="news-card">
-        <div class="thumb">
-          <img src="images/soiree.png" alt="Soirée live">
-          <span class="date-badge"><i class="fa-solid fa-music"></i> Sam. 20h</span>
-        </div>
-        <div class="body">
-          <h3>Soirée Live Music</h3>
-          <p>Venez vibrer au rythme de nos artistes locaux dans une ambiance chaleureuse.</p>
-        </div>
-      </article>
-      <article class="news-card">
-        <div class="thumb">
-          <img src="images/babenda.png" alt="Menu de saison">
-          <span class="date-badge"><i class="fa-solid fa-leaf"></i> Nouveau</span>
-        </div>
-        <div class="body">
-          <h3>Menu de saison</h3>
-          <p>Découvrez nos nouvelles recettes préparées avec des produits frais du terroir.</p>
-        </div>
-      </article>
+    <div class="news-carousel-wrapper reveal">
+      <div class="news-carousel" id="newsCarousel">
+        <article class="news-card">
+          <div class="thumb">
+            <img src="images/hero.jpg" alt="Ouverture officielle" loading="lazy">
+            <span class="date-badge"><i class="fa-solid fa-star"></i> 27/09/2026</span>
+          </div>
+          <div class="body">
+            <h3>Ouverture officielle</h3>
+            <p>Célébration de l'ouverture officielle de l'Espace Festicas Ibelina. Programme spécial toute la journée.</p>
+          </div>
+        </article>
+        <article class="news-card">
+          <div class="thumb">
+            <img src="images/soiree.png" alt="Soirée live" loading="lazy">
+            <span class="date-badge"><i class="fa-solid fa-music"></i> Sam. 20h</span>
+          </div>
+          <div class="body">
+            <h3>Soirée Live Music</h3>
+            <p>Venez vibrer au rythme de nos artistes locaux dans une ambiance chaleureuse.</p>
+          </div>
+        </article>
+        <article class="news-card">
+          <div class="thumb">
+            <img src="images/babenda.png" alt="Menu de saison" loading="lazy">
+            <span class="date-badge"><i class="fa-solid fa-leaf"></i> Nouveau</span>
+          </div>
+          <div class="body">
+            <h3>Menu de saison</h3>
+            <p>Découvrez nos nouvelles recettes préparées avec des produits frais du terroir.</p>
+          </div>
+        </article>
+      </div>
+      <div class="carousel-nav">
+        <button id="newsPrev" aria-label="Précédent"><i class="fa-solid fa-chevron-left"></i></button>
+        <button id="newsNext" aria-label="Suivant"><i class="fa-solid fa-chevron-right"></i></button>
+      </div>
+      <div class="carousel-dots" id="newsDots"></div>
     </div>
   </div>
 </section>
@@ -749,7 +846,7 @@ section{padding:80px 20px;position:relative}
     <div class="services-grid stagger">
       <div class="service-card">
         <div class="service-image">
-          <img src="images/resto.png" alt="Restaurant">
+          <img src="images/resto.png" alt="Restaurant" loading="lazy">
           <div class="service-icon-badge"><i class="fa-solid fa-utensils"></i></div>
         </div>
         <div class="service-body">
@@ -759,7 +856,7 @@ section{padding:80px 20px;position:relative}
       </div>
       <div class="service-card">
         <div class="service-image">
-          <img src="images/espace.png" alt="Salle d'événements">
+          <img src="images/espace.png" alt="Salle d'événements" loading="lazy">
           <div class="service-icon-badge"><i class="fa-solid fa-champagne-glasses"></i></div>
         </div>
         <div class="service-body">
@@ -769,7 +866,7 @@ section{padding:80px 20px;position:relative}
       </div>
       <div class="service-card">
         <div class="service-image">
-          <img src="images/detente.png" alt="Jardin de détente">
+          <img src="images/detente.png" alt="Jardin de détente" loading="lazy">
           <div class="service-icon-badge"><i class="fa-solid fa-tree"></i></div>
         </div>
         <div class="service-body">
@@ -793,27 +890,27 @@ section{padding:80px 20px;position:relative}
 
     <div class="dishes stagger">
       <div class="dish" onclick="openMenuPage()">
-        <div class="dish-img"><img src="logo.png" alt="Riz gras"><span class="price-tag">2 500 F</span></div>
+        <div class="dish-img"><img src="images/rizsoumbala.png" alt="Riz gras" loading="lazy"><span class="price-tag">2 500 F</span></div>
         <div class="dish-info"><h4>Riz gras</h4><p>Riz parfumé, légumes frais et viande tendre</p></div>
       </div>
       <div class="dish" onclick="openMenuPage()">
-        <div class="dish-img"><img src="logo.png" alt="Poulet braisé"><span class="price-tag">3 500 F</span></div>
+        <div class="dish-img"><img src="images/pouletbraise.png" alt="Poulet braisé" loading="lazy"><span class="price-tag">3 500 F</span></div>
         <div class="dish-info"><h4>Poulet braisé</h4><p>Poulet mariné, grillé au feu de bois</p></div>
       </div>
       <div class="dish" onclick="openMenuPage()">
-        <div class="dish-img"><img src="logo.png" alt="Poisson capitaine"><span class="price-tag">4 000 F</span></div>
+        <div class="dish-img"><img src="images/poissoncapi.png" alt="Poisson capitaine" loading="lazy"><span class="price-tag">4 000 F</span></div>
         <div class="dish-info"><h4>Poisson capitaine</h4><p>Poisson frais grillé, accompagné d'attieké</p></div>
       </div>
       <div class="dish" onclick="openMenuPage()">
-        <div class="dish-img"><img src="logo.png" alt="Sauce gombo"><span class="price-tag">2 000 F</span></div>
+        <div class="dish-img"><img src="images/gombo.png" alt="Sauce gombo" loading="lazy"><span class="price-tag">2 000 F</span></div>
         <div class="dish-info"><h4>Sauce gombo</h4><p>Sauce traditionnelle avec viande ou poisson</p></div>
       </div>
       <div class="dish" onclick="openMenuPage()">
-        <div class="dish-img"><img src="logo.png" alt="Riz sauce arachide"><span class="price-tag">2 200 F</span></div>
+        <div class="dish-img"><img src="images/arachid.png" alt="Riz sauce arachide" loading="lazy"><span class="price-tag">2 200 F</span></div>
         <div class="dish-info"><h4>Riz sauce arachide</h4><p>Riz blanc nappé d'une sauce onctueuse</p></div>
       </div>
       <div class="dish" onclick="openMenuPage()">
-        <div class="dish-img"><img src="logo.png" alt="Salade Festicas"><span class="price-tag">1 800 F</span></div>
+        <div class="dish-img"><img src="images/salade.png" alt="Salade Festicas" loading="lazy"><span class="price-tag">1 800 F</span></div>
         <div class="dish-info"><h4>Salade Festicas</h4><p>Mélange frais de saison, vinaigrette maison</p></div>
       </div>
     </div>
@@ -828,7 +925,7 @@ section{padding:80px 20px;position:relative}
 <section class="presentation reveal" id="presentation">
   <div class="container">
     <div class="visual reveal">
-      <img src="presentation.png" alt="Espace Festicas Ibelina">
+      <img src="presentation.png" alt="Espace Festicas Ibelina" loading="lazy">
     </div>
     <div class="text reveal">
       <h2>Bienvenue à l'Espace <span class="accent">Festicas Ibelina</span></h2>
@@ -843,7 +940,7 @@ section{padding:80px 20px;position:relative}
   </div>
 </section>
 
-<!-- ================= GALERIE ================= -->
+<!-- ================= GALERIE CARROUSEL ================= -->
 <section class="galerie reveal" id="galerie">
   <div class="container">
     <div class="section-title reveal">
@@ -852,13 +949,20 @@ section{padding:80px 20px;position:relative}
       <div class="sep"></div>
       <p>Quelques images de notre espace, de nos plats et de nos événements.</p>
     </div>
-    <div class="gallery-grid stagger">
-      <div class="gallery-item"><img src="logo.png" alt="Galerie 1"></div>
-      <div class="gallery-item"><img src="logo.png" alt="Galerie 2"></div>
-      <div class="gallery-item"><img src="logo.png" alt="Galerie 3"></div>
-      <div class="gallery-item"><img src="logo.png" alt="Galerie 4"></div>
-      <div class="gallery-item"><img src="logo.png" alt="Galerie 5"></div>
-      <div class="gallery-item"><img src="logo.png" alt="Galerie 6"></div>
+    <div class="gallery-carousel-wrapper reveal">
+      <div class="gallery-carousel" id="galleryCarousel">
+        <div class="gallery-item"><img src="images/img0.png" alt="Galerie 1" loading="lazy"></div>
+        <div class="gallery-item"><img src="images/img10.png" alt="Galerie 2" loading="lazy"></div>
+        <div class="gallery-item"><img src="images/img2.png" alt="Galerie 3" loading="lazy"></div>
+        <div class="gallery-item"><img src="images/img7.png" alt="Galerie 4" loading="lazy"></div>
+        <div class="gallery-item"><img src="images/img8.png" alt="Galerie 5" loading="lazy"></div>
+        <div class="gallery-item"><img src="images/img6.png" alt="Galerie 6" loading="lazy"></div>
+      </div>
+      <div class="carousel-nav">
+        <button id="galleryPrev" aria-label="Précédent"><i class="fa-solid fa-chevron-left"></i></button>
+        <button id="galleryNext" aria-label="Suivant"><i class="fa-solid fa-chevron-right"></i></button>
+      </div>
+      <div class="carousel-dots" id="galleryDots"></div>
     </div>
   </div>
 </section>
@@ -872,11 +976,13 @@ section{padding:80px 20px;position:relative}
       <div class="sep"></div>
     </div>
     <div class="video-wrapper reveal">
-      <div>
-        <div class="play-icon"><i class="fa-solid fa-play"></i></div>
-        <h3>Vidéo bientôt disponible</h3>
-        <p>Notre équipe prépare actuellement une vidéo de présentation de l'espace. Restez connectés !</p>
-      </div>
+      <iframe
+        src="https://www.youtube.com/embed/dQw4w9WgXcQ?rel=0&modestbranding=1"
+        title="Présentation Espace Festicas Ibelina"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+        loading="lazy">
+      </iframe>
     </div>
   </div>
 </section>
@@ -917,8 +1023,10 @@ section{padding:80px 20px;position:relative}
 
     <div class="map-wrapper reveal">
       <iframe
-        src="https://www.openstreetmap.org/export/embed.html?bbox=-4.79%2C10.61%2C-4.73%2C10.66&layer=mapnik&marker=10.6369,-4.7590"
-        loading="lazy" title="Localisation Espace Festicas Ibelina">
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3899.123456789!2d-4.788514!3d10.648311!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTDCsDM4JzUzLjkiTiA0wrA0NyczOC43Ilc!5e1!3m2!1sfr!2sbf!4v1234567890"
+        loading="lazy"
+        title="Localisation Espace Festicas Ibelina"
+        referrerpolicy="no-referrer-when-downgrade">
       </iframe>
     </div>
 
@@ -980,7 +1088,6 @@ section{padding:80px 20px;position:relative}
           <div class="ic"><i class="fa-brands fa-whatsapp"></i></div>
           <div>
             <h4>WhatsApp</h4>
-            <a href="https://wa.me/22646778462" target="_blank" rel="noopener">+226 46 77 84 62</a>
             <a href="https://wa.me/22669064848" target="_blank" rel="noopener">+226 69 06 48 48</a>
           </div>
         </div>
@@ -988,7 +1095,7 @@ section{padding:80px 20px;position:relative}
           <div class="ic"><i class="fa-solid fa-globe"></i></div>
           <div>
             <h4>Site web</h4>
-            <a href="https://espacefesticasibelina.com">espacefesticasibelina.com</a>
+            <a href="https://espacefesticasibelina.online">espacefesticasibelina.online</a>
           </div>
         </div>
       </div>
@@ -1039,12 +1146,12 @@ section{padding:80px 20px;position:relative}
 
 <script>
 /* =========================================================
-   1. PRELOADER — animation d'ouverture
+   1. PRELOADER
    ========================================================= */
 window.addEventListener('load', () => {
   setTimeout(() => {
     document.getElementById('preloader').classList.add('hidden');
-  }, 1800);
+  }, 1500);
 });
 
 /* =========================================================
@@ -1058,7 +1165,7 @@ document.getElementById('year').textContent = new Date().getFullYear();
 const header = document.getElementById('header');
 window.addEventListener('scroll', () => {
   header.classList.toggle('scrolled', window.scrollY > 60);
-});
+}, { passive: true });
 
 /* =========================================================
    4. MENU MOBILE
@@ -1088,14 +1195,14 @@ const revealObserver = new IntersectionObserver((entries) => {
       revealObserver.unobserve(entry.target);
     }
   });
-}, { threshold: 0.12 });
+}, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
 
 document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
 
 /* =========================================================
-   6. COMPTE À REBOURS — OUVERTURE 27/09/2026
+   6. COMPTE À REBOURS
    ========================================================= */
-const targetDate = new Date('2026-09-27T00:00:00').getTime();
+const targetDate = new Date('2026-09-27T15:00:00').getTime();
 
 function updateCountdown(){
   const now = new Date().getTime();
@@ -1122,7 +1229,7 @@ updateCountdown();
 setInterval(updateCountdown, 1000);
 
 /* =========================================================
-   7. CALENDRIER INTERACTIF
+   7. CALENDRIER
    ========================================================= */
 const events = [
   { date:'2026-09-27', title:'🎉 Ouverture officielle', desc:'Grande célébration — toute la journée', past:false },
@@ -1209,16 +1316,199 @@ document.getElementById('nextMonth').addEventListener('click', () => {
 renderCalendar();
 
 /* =========================================================
-   8. MENU — REDIRECTION
+   8. CARROUSEL ACTUALITÉS
+   ========================================================= */
+(function initNewsCarousel(){
+  const carousel = document.getElementById('newsCarousel');
+  const dotsContainer = document.getElementById('newsDots');
+  const prevBtn = document.getElementById('newsPrev');
+  const nextBtn = document.getElementById('newsNext');
+  if (!carousel) return;
+
+  const cards = carousel.querySelectorAll('.news-card');
+  let currentIndex = 0;
+  let autoPlayInterval;
+
+  function getVisibleCount(){
+    const w = window.innerWidth;
+    if (w >= 900) return 3;
+    if (w >= 640) return 2;
+    return 1;
+  }
+
+  function getTotalPages(){
+    return Math.max(1, cards.length - getVisibleCount() + 1);
+  }
+
+  function updateDots(){
+    dotsContainer.innerHTML = '';
+    const total = getTotalPages();
+    for (let i = 0; i < total; i++){
+      const dot = document.createElement('div');
+      dot.className = 'dot' + (i === currentIndex ? ' active' : '');
+      dot.addEventListener('click', () => goTo(i));
+      dotsContainer.appendChild(dot);
+    }
+  }
+
+  function goTo(index){
+    const total = getTotalPages();
+    currentIndex = Math.max(0, Math.min(index, total - 1));
+    const card = cards[0];
+    const gap = 20;
+    const cardWidth = card.offsetWidth + gap;
+    carousel.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
+    updateDots();
+  }
+
+  function next(){
+    const total = getTotalPages();
+    goTo(currentIndex >= total - 1 ? 0 : currentIndex + 1);
+  }
+
+  function prev(){
+    const total = getTotalPages();
+    goTo(currentIndex <= 0 ? total - 1 : currentIndex - 1);
+  }
+
+  prevBtn.addEventListener('click', () => { prev(); resetAutoPlay(); });
+  nextBtn.addEventListener('click', () => { next(); resetAutoPlay(); });
+
+  function startAutoPlay(){
+    autoPlayInterval = setInterval(next, 5000);
+  }
+  function resetAutoPlay(){
+    clearInterval(autoPlayInterval);
+    startAutoPlay();
+  }
+
+  // Touch swipe
+  let startX = 0, isDragging = false;
+  carousel.addEventListener('touchstart', e => {
+    startX = e.touches[0].clientX;
+    isDragging = true;
+    clearInterval(autoPlayInterval);
+  }, { passive: true });
+  carousel.addEventListener('touchend', e => {
+    if (!isDragging) return;
+    isDragging = false;
+    const diff = startX - e.changedTouches[0].clientX;
+    if (Math.abs(diff) > 40) diff > 0 ? next() : prev();
+    startAutoPlay();
+  }, { passive: true });
+
+  window.addEventListener('resize', () => {
+    goTo(Math.min(currentIndex, getTotalPages() - 1));
+    updateDots();
+  });
+
+  updateDots();
+  startAutoPlay();
+})();
+
+/* =========================================================
+   9. CARROUSEL GALERIE
+   ========================================================= */
+(function initGalleryCarousel(){
+  const carousel = document.getElementById('galleryCarousel');
+  const dotsContainer = document.getElementById('galleryDots');
+  const prevBtn = document.getElementById('galleryPrev');
+  const nextBtn = document.getElementById('galleryNext');
+  if (!carousel) return;
+
+  const items = carousel.querySelectorAll('.gallery-item');
+  let currentIndex = 0;
+  let autoPlayInterval;
+
+  function getVisibleCount(){
+    const w = window.innerWidth;
+    if (w >= 1200) return 4;
+    if (w >= 900) return 4;
+    if (w >= 640) return 3;
+    if (w >= 480) return 2;
+    return 1;
+  }
+
+  function getTotalPages(){
+    return Math.max(1, items.length - getVisibleCount() + 1);
+  }
+
+  function updateDots(){
+    dotsContainer.innerHTML = '';
+    const total = getTotalPages();
+    for (let i = 0; i < total; i++){
+      const dot = document.createElement('div');
+      dot.className = 'dot' + (i === currentIndex ? ' active' : '');
+      dot.addEventListener('click', () => goTo(i));
+      dotsContainer.appendChild(dot);
+    }
+  }
+
+  function goTo(index){
+    const total = getTotalPages();
+    currentIndex = Math.max(0, Math.min(index, total - 1));
+    const item = items[0];
+    const gap = 14;
+    const itemWidth = item.offsetWidth + gap;
+    carousel.style.transform = `translateX(-${currentIndex * itemWidth}px)`;
+    updateDots();
+  }
+
+  function next(){
+    const total = getTotalPages();
+    goTo(currentIndex >= total - 1 ? 0 : currentIndex + 1);
+  }
+
+  function prev(){
+    const total = getTotalPages();
+    goTo(currentIndex <= 0 ? total - 1 : currentIndex - 1);
+  }
+
+  prevBtn.addEventListener('click', () => { prev(); resetAutoPlay(); });
+  nextBtn.addEventListener('click', () => { next(); resetAutoPlay(); });
+
+  function startAutoPlay(){
+    autoPlayInterval = setInterval(next, 4000);
+  }
+  function resetAutoPlay(){
+    clearInterval(autoPlayInterval);
+    startAutoPlay();
+  }
+
+  let startX = 0, isDragging = false;
+  carousel.addEventListener('touchstart', e => {
+    startX = e.touches[0].clientX;
+    isDragging = true;
+    clearInterval(autoPlayInterval);
+  }, { passive: true });
+  carousel.addEventListener('touchend', e => {
+    if (!isDragging) return;
+    isDragging = false;
+    const diff = startX - e.changedTouches[0].clientX;
+    if (Math.abs(diff) > 40) diff > 0 ? next() : prev();
+    startAutoPlay();
+  }, { passive: true });
+
+  window.addEventListener('resize', () => {
+    goTo(Math.min(currentIndex, getTotalPages() - 1));
+    updateDots();
+  });
+
+  updateDots();
+  startAutoPlay();
+})();
+
+/* =========================================================
+   10. MENU — REDIRECTION
    ========================================================= */
 function openMenuPage(){
-  window.location.href = '#';
+  window.location.href = 'menu.html';
 }
 
 /* =========================================================
-   9. FORMULAIRE CONTACT → WHATSAPP
+   11. FORMULAIRE CONTACT → WHATSAPP
    ========================================================= */
-const WHATSAPP_NUMBER = '22646778462';
+const WHATSAPP_NUMBER = '22669064848';
 
 function handleContact(e){
   e.preventDefault();
