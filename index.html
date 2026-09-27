@@ -29,7 +29,7 @@
 <link rel="alternate" hreflang="fr" href="https://espacefesticasibelina.online/">
 <link rel="alternate" hreflang="x-default" href="https://espacefesticasibelina.online/">
 
-<!-- ===================== OPEN GRAPH (WhatsApp, Facebook, LinkedIn) ===================== -->
+<!-- ===================== OPEN GRAPH ===================== -->
 <meta property="og:type" content="restaurant">
 <meta property="og:site_name" content="Espace Festicas Ibelina">
 <meta property="og:title" content="Espace Festicas Ibelina — Restaurant • Événements • Jardin à Banfora">
@@ -65,14 +65,14 @@
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="format-detection" content="telephone=yes">
 
-<!-- ===================== FAVICON (logo.png partout) ===================== -->
+<!-- ===================== FAVICON ===================== -->
 <link rel="icon" type="image/png" href="logo.png" sizes="32x32">
 <link rel="icon" type="image/png" href="logo.png" sizes="192x192">
 <link rel="apple-touch-icon" href="logo.png" sizes="180x180">
 <link rel="mask-icon" href="logo.png" color="#1B5E20">
 <link rel="shortcut icon" href="logo.png" type="image/png">
 
-<!-- ===================== PERFORMANCE / PRÉCONNEXIONS ===================== -->
+<!-- ===================== PERFORMANCE ===================== -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
@@ -81,15 +81,15 @@
 <!-- ===================== FONTS ===================== -->
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-<!-- ===================== FONT AWESOME (non bloquant) ===================== -->
+<!-- ===================== FONT AWESOME ===================== -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" media="print" onload="this.media='all'">
 <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"></noscript>
 
-<!-- ===================== PRÉCHARGEMENT LOGO + HERO ===================== -->
+<!-- ===================== PRÉCHARGEMENT ===================== -->
 <link rel="preload" as="image" href="logo.png" fetchpriority="high">
 <link rel="preload" as="image" href="images/hero.jpg" fetchpriority="high">
 
-<!-- ===================== SCHEMA.ORG — Restaurant + LocalBusiness + EventVenue ===================== -->
+<!-- ===================== SCHEMA.ORG — Restaurant ===================== -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -169,7 +169,7 @@
 }
 </script>
 
-<!-- ===================== SCHEMA.ORG — FAQ (rich snippets + IA) ===================== -->
+<!-- ===================== SCHEMA.ORG — FAQ ===================== -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -277,7 +277,6 @@ iframe{border:0}
 @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
 @keyframes kenburns{0%{transform:scale(1) translate(0,0)}100%{transform:scale(1.15) translate(-2%,-2%)}}
 @keyframes pulseRing{0%{box-shadow:0 0 0 0 rgba(37,211,102,.6)}70%{box-shadow:0 0 0 18px rgba(37,211,102,0)}100%{box-shadow:0 0 0 0 rgba(37,211,102,0)}}
-@keyframes ticker{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
 
 /* ============ HEADER ============ */
 .header{
@@ -415,7 +414,7 @@ section{padding:70px 16px;position:relative}
 .section-title .sep{width:70px;height:3px;background:linear-gradient(90deg,var(--or),var(--bleu));margin:0 auto;border-radius:3px}
 .section-title p{max-width:640px;margin:16px auto 0;color:var(--texte-doux);font-size:.95rem}
 
-/* ============ VIDÉO — LECTEUR HTML5 AMÉLIORÉ ============ */
+/* ============ VIDÉO ============ */
 .video-section{background:var(--blanc)}
 .video-wrapper{
   max-width:960px;margin:0 auto;
@@ -432,7 +431,6 @@ section{padding:70px 16px;position:relative}
   background:#000;
   cursor:pointer;
 }
-/* Bouton play overlay (avant lecture) */
 .video-wrapper .video-overlay{
   position:absolute;inset:0;
   display:flex;align-items:center;justify-content:center;
@@ -440,7 +438,6 @@ section{padding:70px 16px;position:relative}
   cursor:pointer;
   transition:opacity .4s ease, visibility .4s ease;
   z-index:2;
-  pointer-events:auto;
 }
 .video-wrapper.playing .video-overlay{
   opacity:0;visibility:hidden;pointer-events:none;
@@ -474,10 +471,6 @@ section{padding:70px 16px;position:relative}
   z-index:3;
 }
 .video-wrapper.playing .video-caption{display:none}
-/* Contrôles personnalisés */
-.video-wrapper video::-webkit-media-controls-panel{background:rgba(13,58,18,.85)}
-.video-wrapper video::-webkit-media-controls-play-button,
-.video-wrapper video::-webkit-media-controls-volume-slider{filter:brightness(1.2)}
 
 /* ============ SERVICES ============ */
 .services{background:var(--creme)}
@@ -569,24 +562,81 @@ section{padding:70px 16px;position:relative}
   background:radial-gradient(circle at 30% 30%,rgba(249,168,37,.15),transparent 60%);
 }
 
-/* ============ GALERIE CARROUSEL ============ */
-.galerie{background:var(--creme)}
-.gallery-carousel-wrapper{position:relative;overflow:hidden;border-radius:var(--rayon);padding:4px}
-.gallery-carousel{
-  display:flex;gap:14px;
-  transition:transform .5s cubic-bezier(.4,0,.2,1);
-  will-change:transform;
+/* ============ CARROUSELS (Actualités + Galerie) ============ */
+.carousel-wrapper{
+  position:relative;
+  overflow:hidden;
+  border-radius:var(--rayon);
+  padding:8px 4px;
+  margin:0 -4px;
 }
-.gallery-carousel .gallery-item{
-  flex:0 0 calc(100% - 0px);
-  aspect-ratio:1/1;border-radius:12px;overflow:hidden;position:relative;
-  cursor:pointer;transition:var(--transition);
+
+.carousel-track{
+  display:flex;
+  gap:20px;
+  transition:transform .6s cubic-bezier(.25,.8,.25,1);
+  will-change:transform;
+  backface-visibility:hidden;
+}
+
+/* ---- Cartes Actualités ---- */
+.news-card{
+  flex:0 0 100%;
+  min-width:0;
+  background:var(--creme);
+  border-radius:var(--rayon);
+  overflow:hidden;
+  transition:var(--transition);
+  border:1px solid rgba(0,0,0,.05);
+  position:relative;
+  box-shadow:0 4px 20px rgba(0,0,0,.06);
+}
+.news-card:hover{transform:translateY(-6px);box-shadow:var(--ombre-forte)}
+.news-card .thumb{
+  height:200px;
+  position:relative;
+  overflow:hidden;
+  background:var(--vert-fonce);
+}
+.news-card .thumb img{
+  width:100%;height:100%;object-fit:cover;
+  transition:transform .8s cubic-bezier(.4,0,.2,1);
+}
+.news-card:hover .thumb img{transform:scale(1.1)}
+.news-card .thumb::after{
+  content:'';position:absolute;inset:0;
+  background:linear-gradient(180deg,transparent 40%,rgba(13,58,18,.7) 100%);
+}
+.news-card .date-badge{
+  position:absolute;top:14px;left:14px;z-index:2;
+  background:var(--or);color:var(--vert);
+  padding:8px 14px;border-radius:8px;
+  font-weight:700;font-size:.72rem;text-transform:uppercase;
+  letter-spacing:1px;box-shadow:0 4px 12px rgba(0,0,0,.2);
+}
+.news-card .body{padding:22px}
+.news-card h3{color:var(--vert);font-size:1.15rem;margin-bottom:8px}
+.news-card p{font-size:.9rem;color:var(--texte-doux)}
+
+/* ---- Items Galerie ---- */
+.gallery-item{
+  flex:0 0 100%;
+  aspect-ratio:1/1;
+  border-radius:12px;
+  overflow:hidden;
+  position:relative;
+  cursor:pointer;
+  transition:var(--transition);
   background:var(--vert-fonce);
   min-width:0;
+  box-shadow:0 4px 20px rgba(0,0,0,.08);
 }
-.gallery-carousel .gallery-item img{width:100%;height:100%;object-fit:cover;transition:transform .8s cubic-bezier(.4,0,.2,1)}
-.gallery-carousel .gallery-item:hover img{transform:scale(1.15)}
-.gallery-carousel .gallery-item::after{
+.gallery-item img{
+  width:100%;height:100%;object-fit:cover;
+  transition:transform .8s cubic-bezier(.4,0,.2,1);
+}
+.gallery-item:hover img{transform:scale(1.12)}
+.gallery-item::after{
   content:'\f00e';
   font-family:'Font Awesome 6 Free';font-weight:900;
   position:absolute;inset:0;
@@ -595,7 +645,99 @@ section{padding:70px 16px;position:relative}
   opacity:0;transition:var(--transition);
   font-size:1.8rem;color:var(--or);
 }
-.gallery-carousel .gallery-item:hover::after{opacity:1}
+.gallery-item:hover::after{opacity:1}
+
+/* ---- Contrôles ---- */
+.carousel-nav{
+  display:flex;
+  justify-content:center;
+  gap:10px;
+  margin-top:28px;
+}
+.carousel-nav button{
+  width:46px;height:46px;
+  border-radius:50%;
+  background:var(--vert);
+  color:var(--blanc);
+  display:flex;align-items:center;justify-content:center;
+  transition:var(--transition);
+  font-size:1rem;
+  box-shadow:0 6px 18px rgba(27,94,32,.25);
+  border:2px solid transparent;
+}
+.carousel-nav button:hover{
+  background:var(--or);
+  color:var(--vert);
+  transform:translateY(-2px) scale(1.05);
+  box-shadow:0 10px 24px rgba(249,168,37,.35);
+}
+.carousel-nav button:active{transform:translateY(0) scale(.98)}
+.carousel-nav button:disabled{
+  opacity:.35;
+  cursor:not-allowed;
+  transform:none;
+}
+
+.carousel-dots{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:8px;
+  margin-top:18px;
+  min-height:12px;
+}
+.carousel-dots .dot{
+  width:10px;height:10px;
+  border-radius:50%;
+  background:rgba(27,94,32,.22);
+  transition:all .35s cubic-bezier(.4,0,.2,1);
+  cursor:pointer;
+  border:none;
+  padding:0;
+}
+.carousel-dots .dot:hover{background:rgba(27,94,32,.4)}
+.carousel-dots .dot.active{
+  background:var(--or);
+  width:32px;
+  border-radius:5px;
+}
+
+/* ---- Flèches latérales (desktop) ---- */
+.carousel-arrows{
+  position:absolute;
+  top:50%;
+  transform:translateY(-50%);
+  width:100%;
+  display:none;
+  justify-content:space-between;
+  pointer-events:none;
+  padding:0 8px;
+  z-index:5;
+}
+.carousel-arrows button{
+  pointer-events:auto;
+  width:48px;height:48px;
+  border-radius:50%;
+  background:rgba(255,255,255,.95);
+  color:var(--vert);
+  display:flex;align-items:center;justify-content:center;
+  font-size:1.1rem;
+  box-shadow:0 8px 24px rgba(0,0,0,.15);
+  transition:var(--transition);
+  backdrop-filter:blur(8px);
+}
+.carousel-arrows button:hover{
+  background:var(--or);
+  color:var(--vert);
+  transform:scale(1.08);
+}
+.carousel-arrows button:disabled{
+  opacity:.3;
+  cursor:not-allowed;
+}
+@media(min-width:900px){
+  .carousel-arrows{display:flex}
+}
 
 /* ============ CALENDRIER ============ */
 .calendrier{background:var(--creme)}
@@ -684,11 +826,7 @@ section{padding:70px 16px;position:relative}
 }
 .whatsapp-float:hover{transform:scale(1.1)}
 
-/* =========================================================
-   RESPONSIVE AMÉLIORÉ
-   ========================================================= */
-
-/* Très petits écrans (≤ 359px) */
+/* ============ MEDIA QUERIES ============ */
 @media (max-width:359px){
   :root{--header-h:60px}
   .dishes{grid-template-columns:1fr}
@@ -698,88 +836,71 @@ section{padding:70px 16px;position:relative}
   .stat strong{font-size:1.1rem}
   .logo-nav img{height:34px}
   .logo-nav span{font-size:.9rem}
-  .logo-nav span small{font-size:.55rem;letter-spacing:1.5px}
   section{padding:60px 12px}
-  .footer-grid{gap:24px}
 }
 
-/* Petits mobiles (360-479px) */
 @media (min-width:360px) and (max-width:479px){
   .dishes{grid-template-columns:repeat(2,1fr)}
   .dish-img{height:130px}
   .dish-info{padding:12px}
   .dish-info h4{font-size:.9rem}
   .dish-info p{font-size:.75rem}
-  .video-wrapper .play-btn{font-size:1.6rem}
 }
 
-/* Mobiles (480-639px) */
 @media (min-width:480px){
   section{padding:80px 20px}
   .dishes{grid-template-columns:repeat(2,1fr)}
   .dish-img{height:160px}
-  .news-carousel .news-card{flex:0 0 calc(100% - 0px)}
-  .gallery-carousel .gallery-item{flex:0 0 calc(50% - 7px)}
+  .news-card{flex:0 0 100%}
+  .gallery-item{flex:0 0 calc(50% - 10px)}
   .contact-info-grid{grid-template-columns:repeat(2,1fr)}
   .footer-grid{grid-template-columns:repeat(2,1fr)}
-  .map-wrapper{height:350px}
 }
 
-/* Tablettes (640-899px) */
 @media (min-width:640px){
   section{padding:90px 28px}
-  .news-carousel .news-card{flex:0 0 calc(50% - 10px)}
+  .news-card{flex:0 0 calc(50% - 10px)}
   .services-grid{grid-template-columns:repeat(2,1fr)}
   .dishes{grid-template-columns:repeat(3,1fr)}
-  .gallery-carousel .gallery-item{flex:0 0 calc(33.333% - 10px)}
+  .gallery-item{flex:0 0 calc(33.333% - 14px)}
   .contact-info-grid{grid-template-columns:repeat(2,1fr)}
   .footer-grid{grid-template-columns:repeat(2,1fr)}
   .presentation .stats{gap:16px}
-  .map-wrapper{height:400px}
 }
 
-/* Desktop (900-1199px) */
 @media (min-width:900px){
   :root{--header-h:80px}
   section{padding:100px 40px}
   .nav-desktop{display:flex}
   .burger{display:none}
-  .news-carousel .news-card{flex:0 0 calc(33.333% - 14px)}
+  .news-card{flex:0 0 calc(33.333% - 14px)}
   .services-grid{grid-template-columns:repeat(3,1fr)}
   .dishes{grid-template-columns:repeat(3,1fr)}
   .dish-img{height:190px}
+  .gallery-item{flex:0 0 calc(25% - 15px)}
   .presentation .container{grid-template-columns:1.1fr 1fr;gap:60px}
   .contact-grid{grid-template-columns:1.2fr 1fr;gap:50px}
   .contact-info-grid{grid-template-columns:repeat(3,1fr)}
   .footer-grid{grid-template-columns:repeat(4,1fr)}
-  .gallery-carousel .gallery-item{flex:0 0 calc(25% - 11px)}
   .map-wrapper{height:450px}
-  .video-wrapper{max-width:960px}
 }
 
-/* Grands écrans (1200-1439px) */
 @media (min-width:1200px){
   .container{max-width:1180px}
-  .news-carousel .news-card{flex:0 0 calc(33.333% - 14px)}
-  .gallery-carousel .gallery-item{flex:0 0 calc(25% - 11px)}
   .video-wrapper{max-width:1000px}
 }
 
-/* Très grands écrans (≥ 1440px) */
 @media (min-width:1440px){
   .container{max-width:1280px}
   .video-wrapper{max-width:1080px}
-  .gallery-carousel .gallery-item{flex:0 0 calc(25% - 11px)}
   section{padding:110px 40px}
 }
 
-/* Très très grands écrans (≥ 1920px) */
 @media (min-width:1920px){
   .container{max-width:1400px}
   .video-wrapper{max-width:1200px}
 }
 
-/* Orientation paysage mobile */
 @media (max-height:500px) and (orientation:landscape){
   .hero{min-height:auto;padding:100px 20px 60px}
   .hero-logo{width:80px}
@@ -788,7 +909,6 @@ section{padding:70px 16px;position:relative}
   .video-wrapper{max-width:100%}
 }
 
-/* Accessibilité */
 @media (prefers-reduced-motion:reduce){
   *,*::before,*::after{animation-duration:.01ms !important;animation-iteration-count:1 !important;transition-duration:.01ms !important;scroll-behavior:auto !important}
 }
@@ -864,7 +984,7 @@ section{padding:70px 16px;position:relative}
   <div class="scroll-indicator">Défiler</div>
 </section>
 
-<!-- ================= VIDÉO — LECTEUR HTML5 AMÉLIORÉ ================= -->
+<!-- ================= VIDÉO ================= -->
 <section class="video-section reveal" id="video">
   <div class="container">
     <div class="section-title reveal">
@@ -1012,14 +1132,18 @@ section{padding:70px 16px;position:relative}
       <div class="sep"></div>
       <p>Quelques images de notre espace, de nos plats et de nos événements.</p>
     </div>
-    <div class="gallery-carousel-wrapper reveal">
-      <div class="gallery-carousel" id="galleryCarousel">
+    <div class="carousel-wrapper reveal" id="galleryWrapper">
+      <div class="carousel-track" id="galleryTrack">
         <div class="gallery-item"><img src="images/img0.png" alt="Espace Festicas Ibelina — vue 1" loading="lazy"></div>
         <div class="gallery-item"><img src="images/img10.png" alt="Espace Festicas Ibelina — vue 2" loading="lazy"></div>
         <div class="gallery-item"><img src="images/img2.png" alt="Espace Festicas Ibelina — vue 3" loading="lazy"></div>
         <div class="gallery-item"><img src="images/img7.png" alt="Espace Festicas Ibelina — vue 4" loading="lazy"></div>
         <div class="gallery-item"><img src="images/img8.png" alt="Espace Festicas Ibelina — vue 5" loading="lazy"></div>
         <div class="gallery-item"><img src="images/img6.png" alt="Espace Festicas Ibelina — vue 6" loading="lazy"></div>
+      </div>
+      <div class="carousel-arrows">
+        <button id="galleryPrevArrow" aria-label="Image précédente"><i class="fa-solid fa-chevron-left"></i></button>
+        <button id="galleryNextArrow" aria-label="Image suivante"><i class="fa-solid fa-chevron-right"></i></button>
       </div>
       <div class="carousel-nav">
         <button id="galleryPrev" aria-label="Précédent"><i class="fa-solid fa-chevron-left"></i></button>
@@ -1030,7 +1154,7 @@ section{padding:70px 16px;position:relative}
   </div>
 </section>
 
-<!-- ================= ACTUALITÉS ================= -->
+<!-- ================= ACTUALITÉS CARROUSEL ================= -->
 <section class="actualites reveal" id="actualites">
   <div class="container">
     <div class="section-title reveal">
@@ -1040,8 +1164,8 @@ section{padding:70px 16px;position:relative}
       <p>Restez informé de toutes les animations et soirées organisées dans notre espace.</p>
     </div>
 
-    <div class="news-carousel-wrapper reveal">
-      <div class="news-carousel" id="newsCarousel">
+    <div class="carousel-wrapper reveal" id="newsWrapper">
+      <div class="carousel-track" id="newsTrack">
         <article class="news-card">
           <div class="thumb">
             <img src="images/hero.jpg" alt="Ouverture officielle de l'Espace Festicas Ibelina" loading="lazy">
@@ -1072,6 +1196,10 @@ section{padding:70px 16px;position:relative}
             <p>Découvrez nos nouvelles recettes préparées avec des produits frais du terroir.</p>
           </div>
         </article>
+      </div>
+      <div class="carousel-arrows">
+        <button id="newsPrevArrow" aria-label="Actualité précédente"><i class="fa-solid fa-chevron-left"></i></button>
+        <button id="newsNextArrow" aria-label="Actualité suivante"><i class="fa-solid fa-chevron-right"></i></button>
       </div>
       <div class="carousel-nav">
         <button id="newsPrev" aria-label="Précédent"><i class="fa-solid fa-chevron-left"></i></button>
@@ -1289,7 +1417,7 @@ const revealObserver = new IntersectionObserver((entries) => {
 document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
 
 /* =========================================================
-   5. LECTEUR VIDÉO HTML5 AMÉLIORÉ
+   5. LECTEUR VIDÉO HTML5
    ========================================================= */
 (function initVideoPlayer(){
   const video = document.getElementById('presentationVideo');
@@ -1454,7 +1582,7 @@ document.getElementById('nextMonth').addEventListener('click', () => {
 renderCalendar();
 
 /* =========================================================
-   8. MOTEUR DE CARROUSEL UNIVERSEL (Actualités + Galerie)
+   8. MOTEUR DE CARROUSEL UNIVERSEL
    ========================================================= */
 function createCarousel(options) {
   const {
@@ -1488,20 +1616,17 @@ function createCarousel(options) {
   let autoPlayTimer = null;
   let isPaused = false;
 
-  /* ---- Calcul dynamique de la largeur d'un item ---- */
   function getItemWidth() {
     if (items.length === 0) return 0;
     const rect = items[0].getBoundingClientRect();
     return rect.width + gap;
   }
 
-  /* ---- Nombre total de "pages" possibles ---- */
   function getTotalPages() {
     const visible = getVisibleCount();
     return Math.max(1, items.length - visible + 1);
   }
 
-  /* ---- Applique la transformation ---- */
   function goTo(index, animate = true) {
     const total = getTotalPages();
     currentIndex = Math.max(0, Math.min(index, total - 1));
@@ -1518,7 +1643,6 @@ function createCarousel(options) {
     updateArrows();
   }
 
-  /* ---- Dots ---- */
   function updateDots() {
     dotsContainer.innerHTML = '';
     const total = getTotalPages();
@@ -1536,14 +1660,12 @@ function createCarousel(options) {
     }
   }
 
-  /* ---- Flèches latérales ---- */
   function updateArrows() {
     const total = getTotalPages();
     if (prevArrow) prevArrow.disabled = currentIndex <= 0;
     if (nextArrow) nextArrow.disabled = currentIndex >= total - 1;
   }
 
-  /* ---- Navigation ---- */
   function next() {
     const total = getTotalPages();
     if (currentIndex >= total - 1) {
@@ -1562,7 +1684,6 @@ function createCarousel(options) {
     }
   }
 
-  /* ---- Autoplay ---- */
   function startAutoPlay() {
     stopAutoPlay();
     if (getTotalPages() <= 1) return;
@@ -1583,14 +1704,12 @@ function createCarousel(options) {
     startAutoPlay();
   }
 
-  /* ---- Pause au survol ---- */
   wrapper.addEventListener('mouseenter', () => { isPaused = true; });
   wrapper.addEventListener('mouseleave', () => {
     isPaused = false;
     resetAutoPlay();
   });
 
-  /* ---- Visibilité de l'onglet ---- */
   document.addEventListener('visibilitychange', () => {
     if (document.hidden) {
       stopAutoPlay();
@@ -1599,13 +1718,11 @@ function createCarousel(options) {
     }
   });
 
-  /* ---- Boutons ---- */
   if (prevBtn) prevBtn.addEventListener('click', () => { prev(); resetAutoPlay(); });
   if (nextBtn) nextBtn.addEventListener('click', () => { next(); resetAutoPlay(); });
   if (prevArrow) prevArrow.addEventListener('click', () => { prev(); resetAutoPlay(); });
   if (nextArrow) nextArrow.addEventListener('click', () => { next(); resetAutoPlay(); });
 
-  /* ---- Swipe tactile ---- */
   let startX = 0;
   let startY = 0;
   let isDragging = false;
@@ -1644,7 +1761,6 @@ function createCarousel(options) {
     startAutoPlay();
   }, { passive: true });
 
-  /* ---- Swipe souris ---- */
   let mouseStartX = 0;
   let mouseDragging = false;
 
@@ -1664,7 +1780,6 @@ function createCarousel(options) {
     startAutoPlay();
   });
 
-  /* ---- Redimensionnement ---- */
   let resizeTimeout;
   window.addEventListener('resize', () => {
     clearTimeout(resizeTimeout);
@@ -1678,7 +1793,6 @@ function createCarousel(options) {
     }, 150);
   });
 
-  /* ---- Initialisation ---- */
   function init() {
     goTo(0, false);
     requestAnimationFrame(() => {
@@ -1703,7 +1817,6 @@ function createCarousel(options) {
    ========================================================= */
 document.addEventListener('DOMContentLoaded', () => {
 
-  /* --- Carrousel ACTUALITÉS --- */
   createCarousel({
     wrapperId: 'newsWrapper',
     trackId: 'newsTrack',
@@ -1723,7 +1836,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  /* --- Carrousel GALERIE --- */
   createCarousel({
     wrapperId: 'galleryWrapper',
     trackId: 'galleryTrack',
