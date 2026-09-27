@@ -769,69 +769,27 @@ section{padding:70px 16px;position:relative}
   <div class="scroll-indicator">Défiler</div>
 </section>
 
-<!-- ================= ACTUALITÉS ================= -->
-<section class="actualites reveal" id="actualites">
+
+<!-- ================= VIDÉO ================= -->
+<section class="video-section reveal" id="video">
   <div class="container">
-    <div class="news-ticker">
-      <span class="label"><i class="fa-solid fa-bullhorn"></i> À la une</span>
-      <div class="ticker-track">
-        <span><i class="fa-solid fa-star" style="color:var(--or)"></i> Ouverture officielle le 27 septembre 2026</span>
-        <span><i class="fa-solid fa-music" style="color:var(--or)"></i> Soirée live ce samedi à partir de 20h</span>
-        <span><i class="fa-solid fa-utensils" style="color:var(--or)"></i> Nouveau menu de saison disponible</span>
-        <span><i class="fa-solid fa-star" style="color:var(--or)"></i> Ouverture officielle le 27 septembre 2026</span>
-        <span><i class="fa-solid fa-music" style="color:var(--or)"></i> Soirée live ce samedi à partir de 20h</span>
-        <span><i class="fa-solid fa-utensils" style="color:var(--or)"></i> Nouveau menu de saison disponible</span>
-      </div>
-    </div>
-
     <div class="section-title reveal">
-      <span class="kicker">Actualités</span>
-      <h2>Événements à venir</h2>
+      <span class="kicker">Vidéo</span>
+      <h2>Présentation de l'espace</h2>
       <div class="sep"></div>
-      <p>Restez informé de toutes les animations et soirées organisées dans notre espace.</p>
     </div>
-
-    <div class="news-carousel-wrapper reveal">
-      <div class="news-carousel" id="newsCarousel">
-        <article class="news-card">
-          <div class="thumb">
-            <img src="images/hero.jpg" alt="Ouverture officielle" loading="lazy">
-            <span class="date-badge"><i class="fa-solid fa-star"></i> 27/09/2026</span>
-          </div>
-          <div class="body">
-            <h3>Ouverture officielle</h3>
-            <p>Célébration de l'ouverture officielle de l'Espace Festicas Ibelina. Programme spécial toute la journée.</p>
-          </div>
-        </article>
-        <article class="news-card">
-          <div class="thumb">
-            <img src="images/soiree.png" alt="Soirée live" loading="lazy">
-            <span class="date-badge"><i class="fa-solid fa-music"></i> Sam. 20h</span>
-          </div>
-          <div class="body">
-            <h3>Soirée Live Music</h3>
-            <p>Venez vibrer au rythme de nos artistes locaux dans une ambiance chaleureuse.</p>
-          </div>
-        </article>
-        <article class="news-card">
-          <div class="thumb">
-            <img src="images/babenda.png" alt="Menu de saison" loading="lazy">
-            <span class="date-badge"><i class="fa-solid fa-leaf"></i> Nouveau</span>
-          </div>
-          <div class="body">
-            <h3>Menu de saison</h3>
-            <p>Découvrez nos nouvelles recettes préparées avec des produits frais du terroir.</p>
-          </div>
-        </article>
-      </div>
-      <div class="carousel-nav">
-        <button id="newsPrev" aria-label="Précédent"><i class="fa-solid fa-chevron-left"></i></button>
-        <button id="newsNext" aria-label="Suivant"><i class="fa-solid fa-chevron-right"></i></button>
-      </div>
-      <div class="carousel-dots" id="newsDots"></div>
+    <div class="video-wrapper reveal">
+      <iframe
+        src="presentation.mp4"
+        title="Présentation Espace Festicas Ibelina"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+        loading="lazy">
+      </iframe>
     </div>
   </div>
 </section>
+
 
 <!-- ================= SERVICES ================= -->
 <section class="services reveal" id="services">
@@ -967,25 +925,59 @@ section{padding:70px 16px;position:relative}
   </div>
 </section>
 
-<!-- ================= VIDÉO ================= -->
-<section class="video-section reveal" id="video">
+<!-- ================= ACTUALITÉS ================= -->
+<section class="actualites reveal" id="actualites">
   <div class="container">
     <div class="section-title reveal">
-      <span class="kicker">Vidéo</span>
-      <h2>Présentation de l'espace</h2>
+      <span class="kicker">Actualités</span>
+      <h2>Événements à venir</h2>
       <div class="sep"></div>
+      <p>Restez informé de toutes les animations et soirées organisées dans notre espace.</p>
     </div>
-    <div class="video-wrapper reveal">
-      <iframe
-        src="/presentation.mp4"
-        title="Présentation Espace Festicas Ibelina"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen
-        loading="lazy">
-      </iframe>
+
+    <div class="news-carousel-wrapper reveal">
+      <div class="news-carousel" id="newsCarousel">
+        <article class="news-card">
+          <div class="thumb">
+            <img src="images/hero.jpg" alt="Ouverture officielle" loading="lazy">
+            <span class="date-badge"><i class="fa-solid fa-star"></i> 27/09/2026</span>
+          </div>
+          <div class="body">
+            <h3>Ouverture officielle</h3>
+            <p>Célébration de l'ouverture officielle de l'Espace Festicas Ibelina. Programme spécial toute la journée.</p>
+          </div>
+        </article>
+        <article class="news-card">
+          <div class="thumb">
+            <img src="images/soiree.png" alt="Soirée live" loading="lazy">
+            <span class="date-badge"><i class="fa-solid fa-music"></i> Sam. 20h</span>
+          </div>
+          <div class="body">
+            <h3>Soirée Live Music</h3>
+            <p>Venez vibrer au rythme de nos artistes locaux dans une ambiance chaleureuse.</p>
+          </div>
+        </article>
+        <article class="news-card">
+          <div class="thumb">
+            <img src="images/babenda.png" alt="Menu de saison" loading="lazy">
+            <span class="date-badge"><i class="fa-solid fa-leaf"></i> Nouveau</span>
+          </div>
+          <div class="body">
+            <h3>Menu de saison</h3>
+            <p>Découvrez nos nouvelles recettes préparées avec des produits frais du terroir.</p>
+          </div>
+        </article>
+      </div>
+      <div class="carousel-nav">
+        <button id="newsPrev" aria-label="Précédent"><i class="fa-solid fa-chevron-left"></i></button>
+        <button id="newsNext" aria-label="Suivant"><i class="fa-solid fa-chevron-right"></i></button>
+      </div>
+      <div class="carousel-dots" id="newsDots"></div>
     </div>
   </div>
 </section>
+
+
 
 <!-- ================= CALENDRIER ================= -->
 <section class="calendrier reveal" id="calendrier">
