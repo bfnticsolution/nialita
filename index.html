@@ -6,9 +6,9 @@
 <meta name="theme-color" content="#1B5E20">
 
 <!-- ===================== SEO PRINCIPAL ===================== -->
-<title>Espace Festicas Ibelina | Restaurant, Événements & Jardin à Banfora, Burkina Faso</title>
+<title>Espace Festicas Ibelina | Restaurant, Événements & Jardin à Banfora</title>
 <meta name="description" content="Restaurant, salle d'événements et jardin de détente à Banfora (Kribina, route de Sindou). Cuisine burkinabè & internationale, ouvert 7j/7 de 8h à 02h. Ouverture officielle le 27 septembre 2026. Réservation : +226 69 06 48 48.">
-<meta name="keywords" content="restaurant Banfora, Espace Festicas Ibelina, événement Banfora, jardin détente Banfora, Kribina, route Sindou, Burkina Faso, restaurant Bobo-Dioulasso, salle de fête Banfora, cuisine burkinabè, mariage Banfora, restaurant Cascades">
+<meta name="keywords" content="Espace Festicas Ibelina, restaurant Banfora, événement Banfora, jardin détente Banfora, Kribina, route Sindou, Burkina Faso, restaurant Bobo-Dioulasso, salle de fête Banfora, cuisine burkinabè, mariage Banfora, restaurant Cascades">
 <meta name="author" content="Espace Festicas Ibelina">
 <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
 <meta name="googlebot" content="index, follow, max-image-preview:large">
@@ -63,8 +63,9 @@
 <meta name="apple-mobile-web-app-title" content="Festicas Ibelina">
 <meta name="application-name" content="Festicas Ibelina">
 <meta name="mobile-web-app-capable" content="yes">
+<meta name="format-detection" content="telephone=yes">
 
-<!-- ===================== FAVICON (utilise logo.png) ===================== -->
+<!-- ===================== FAVICON (logo.png partout) ===================== -->
 <link rel="icon" type="image/png" href="logo.png" sizes="32x32">
 <link rel="icon" type="image/png" href="logo.png" sizes="192x192">
 <link rel="apple-touch-icon" href="logo.png" sizes="180x180">
@@ -80,15 +81,15 @@
 <!-- ===================== FONTS ===================== -->
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-<!-- ===================== FONT AWESOME (chargement non bloquant) ===================== -->
+<!-- ===================== FONT AWESOME (non bloquant) ===================== -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" media="print" onload="this.media='all'">
 <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"></noscript>
 
-<!-- ===================== PRÉCHARGEMENT LOGO & HERO (LCP) ===================== -->
+<!-- ===================== PRÉCHARGEMENT LOGO + HERO ===================== -->
 <link rel="preload" as="image" href="logo.png" fetchpriority="high">
 <link rel="preload" as="image" href="images/hero.jpg" fetchpriority="high">
 
-<!-- ===================== SCHEMA.ORG — Restaurant + LocalBusiness ===================== -->
+<!-- ===================== SCHEMA.ORG — Restaurant + LocalBusiness + EventVenue ===================== -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -277,8 +278,6 @@ iframe{border:0}
 @keyframes kenburns{0%{transform:scale(1) translate(0,0)}100%{transform:scale(1.15) translate(-2%,-2%)}}
 @keyframes pulseRing{0%{box-shadow:0 0 0 0 rgba(37,211,102,.6)}70%{box-shadow:0 0 0 18px rgba(37,211,102,0)}100%{box-shadow:0 0 0 0 rgba(37,211,102,0)}}
 @keyframes ticker{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
-@keyframes loaderLogo{0%{transform:scale(1) rotate(-3deg)}100%{transform:scale(1.08) rotate(3deg)}}
-@keyframes loaderBar{0%{transform:translateX(-100%)}100%{transform:translateX(300%)}}
 
 /* ============ HEADER ============ */
 .header{
@@ -348,7 +347,6 @@ iframe{border:0}
   position:absolute;inset:0;
   background-image:url('images/hero.jpg');
   background-size:cover;background-position:center;
-  background-color:#0d3a12;
   animation:kenburns 20s ease-in-out infinite alternate;
 }
 .hero-bg::after{
@@ -417,78 +415,69 @@ section{padding:70px 16px;position:relative}
 .section-title .sep{width:70px;height:3px;background:linear-gradient(90deg,var(--or),var(--bleu));margin:0 auto;border-radius:3px}
 .section-title p{max-width:640px;margin:16px auto 0;color:var(--texte-doux);font-size:.95rem}
 
-/* ============ ACTUALITÉS ============ */
-.actualites{background:var(--blanc)}
-.news-ticker{
-  background:linear-gradient(90deg,var(--bleu) 0%,var(--vert) 100%);
-  color:var(--blanc);padding:12px 0;overflow:hidden;
-  border-radius:var(--rayon);margin-bottom:40px;
-  display:flex;align-items:center;
+/* ============ VIDÉO — LECTEUR HTML5 AMÉLIORÉ ============ */
+.video-section{background:var(--blanc)}
+.video-wrapper{
+  max-width:960px;margin:0 auto;
+  border-radius:var(--rayon);
+  overflow:hidden;
+  box-shadow:var(--ombre-forte);
+  position:relative;
+  background:#000;
+  aspect-ratio:16/9;
 }
-.news-ticker .label{background:var(--or);color:var(--vert);padding:6px 16px;font-weight:700;font-size:.75rem;letter-spacing:2px;text-transform:uppercase;margin-left:12px;border-radius:6px;white-space:nowrap;z-index:2}
-.ticker-track{display:flex;gap:60px;animation:ticker 28s linear infinite;padding-left:30px;white-space:nowrap}
-.ticker-track span{font-size:.9rem;opacity:.95}
-.ticker-track span::before{content:'◆';color:var(--or);margin-right:14px}
-
-/* ============ CARROUSEL ACTUALITÉS ============ */
-.news-carousel-wrapper{position:relative;overflow:hidden;border-radius:var(--rayon);padding:4px}
-.news-carousel{
-  display:flex;gap:20px;
-  transition:transform .5s cubic-bezier(.4,0,.2,1);
-  will-change:transform;
+.video-wrapper video{
+  width:100%;height:100%;display:block;
+  object-fit:cover;
+  background:#000;
+  cursor:pointer;
 }
-.news-carousel .news-card{
-  flex:0 0 calc(100% - 0px);
-  min-width:0;
-  background:var(--creme);border-radius:var(--rayon);overflow:hidden;
-  transition:var(--transition);border:1px solid rgba(0,0,0,.05);
+/* Bouton play overlay (avant lecture) */
+.video-wrapper .video-overlay{
+  position:absolute;inset:0;
+  display:flex;align-items:center;justify-content:center;
+  background:linear-gradient(180deg,rgba(13,58,18,.55) 0%,rgba(13,58,18,.75) 100%);
+  cursor:pointer;
+  transition:opacity .4s ease, visibility .4s ease;
+  z-index:2;
+  pointer-events:auto;
+}
+.video-wrapper.playing .video-overlay{
+  opacity:0;visibility:hidden;pointer-events:none;
+}
+.video-wrapper .play-btn{
+  width:clamp(70px,14vw,100px);
+  height:clamp(70px,14vw,100px);
+  border-radius:50%;
+  background:linear-gradient(135deg,var(--or),var(--or-fonce));
+  color:var(--vert);
+  display:flex;align-items:center;justify-content:center;
+  font-size:clamp(1.6rem,3.5vw,2.4rem);
+  box-shadow:0 10px 40px rgba(249,168,37,.55);
+  transition:var(--transition);
   position:relative;
 }
-.news-carousel .news-card:hover{transform:translateY(-8px);box-shadow:var(--ombre-forte)}
-.news-carousel .news-card .thumb{
-  height:200px;position:relative;overflow:hidden;
-  background:var(--vert-fonce);
+.video-wrapper .play-btn::before{
+  content:'';position:absolute;inset:-12px;border-radius:50%;
+  border:2px solid rgba(249,168,37,.35);
+  animation:pulseRing 2s infinite;
 }
-.news-carousel .news-card .thumb img{
-  width:100%;height:100%;object-fit:cover;
-  transition:transform .8s cubic-bezier(.4,0,.2,1);
+.video-wrapper .play-btn:hover{transform:scale(1.1)}
+.video-wrapper .video-caption{
+  position:absolute;bottom:0;left:0;right:0;
+  padding:18px 22px;
+  background:linear-gradient(180deg,transparent,rgba(13,58,18,.9));
+  color:var(--blanc);
+  font-size:.85rem;font-weight:500;
+  text-align:center;
+  pointer-events:none;
+  z-index:3;
 }
-.news-carousel .news-card:hover .thumb img{transform:scale(1.1)}
-.news-carousel .news-card .thumb::after{
-  content:'';position:absolute;inset:0;
-  background:linear-gradient(180deg,transparent 40%,rgba(13,58,18,.7) 100%);
-}
-.news-carousel .news-card .date-badge{
-  position:absolute;top:14px;left:14px;z-index:2;
-  background:var(--or);color:var(--vert);
-  padding:8px 14px;border-radius:8px;
-  font-weight:700;font-size:.72rem;text-transform:uppercase;
-  letter-spacing:1px;box-shadow:0 4px 12px rgba(0,0,0,.2);
-}
-.news-carousel .news-card .body{padding:22px}
-.news-carousel .news-card h3{color:var(--vert);font-size:1.15rem;margin-bottom:8px}
-.news-carousel .news-card p{font-size:.9rem;color:var(--texte-doux)}
-
-.carousel-nav{
-  display:flex;justify-content:center;gap:10px;margin-top:24px;
-}
-.carousel-nav button{
-  width:44px;height:44px;border-radius:50%;
-  background:var(--vert);color:var(--blanc);
-  display:flex;align-items:center;justify-content:center;
-  transition:var(--transition);
-  font-size:1rem;
-}
-.carousel-nav button:hover{background:var(--or);color:var(--vert);transform:scale(1.1)}
-.carousel-dots{
-  display:flex;justify-content:center;gap:8px;margin-top:16px;
-}
-.carousel-dots .dot{
-  width:10px;height:10px;border-radius:50%;
-  background:rgba(27,94,32,.25);
-  transition:var(--transition);cursor:pointer;
-}
-.carousel-dots .dot.active{background:var(--or);width:28px;border-radius:5px}
+.video-wrapper.playing .video-caption{display:none}
+/* Contrôles personnalisés */
+.video-wrapper video::-webkit-media-controls-panel{background:rgba(13,58,18,.85)}
+.video-wrapper video::-webkit-media-controls-play-button,
+.video-wrapper video::-webkit-media-controls-volume-slider{filter:brightness(1.2)}
 
 /* ============ SERVICES ============ */
 .services{background:var(--creme)}
@@ -608,18 +597,6 @@ section{padding:70px 16px;position:relative}
 }
 .gallery-carousel .gallery-item:hover::after{opacity:1}
 
-/* ============ VIDÉO ============ */
-.video-section{background:var(--blanc)}
-.video-wrapper{
-  max-width:900px;margin:0 auto;aspect-ratio:16/9;border-radius:var(--rayon);
-  overflow:hidden;box-shadow:var(--ombre-forte);position:relative;
-  background:#000;
-}
-.video-wrapper iframe,
-.video-wrapper video{
-  width:100%;height:100%;display:block;border:0;
-}
-
 /* ============ CALENDRIER ============ */
 .calendrier{background:var(--creme)}
 .calendar-box{background:var(--blanc);border-radius:var(--rayon);padding:20px;box-shadow:var(--ombre);max-width:900px;margin:0 auto}
@@ -707,27 +684,36 @@ section{padding:70px 16px;position:relative}
 }
 .whatsapp-float:hover{transform:scale(1.1)}
 
-/* ============ MEDIA QUERIES ============ */
+/* =========================================================
+   RESPONSIVE AMÉLIORÉ
+   ========================================================= */
 
-/* Très petits écrans */
+/* Très petits écrans (≤ 359px) */
 @media (max-width:359px){
+  :root{--header-h:60px}
   .dishes{grid-template-columns:1fr}
   .cd-unit strong{font-size:1rem}
   .countdown{padding:10px 12px}
   .hero-buttons .btn{padding:12px 20px;font-size:.85rem}
   .stat strong{font-size:1.1rem}
+  .logo-nav img{height:34px}
+  .logo-nav span{font-size:.9rem}
+  .logo-nav span small{font-size:.55rem;letter-spacing:1.5px}
+  section{padding:60px 12px}
+  .footer-grid{gap:24px}
 }
 
-/* Petits mobiles */
+/* Petits mobiles (360-479px) */
 @media (min-width:360px) and (max-width:479px){
   .dishes{grid-template-columns:repeat(2,1fr)}
   .dish-img{height:130px}
   .dish-info{padding:12px}
   .dish-info h4{font-size:.9rem}
   .dish-info p{font-size:.75rem}
+  .video-wrapper .play-btn{font-size:1.6rem}
 }
 
-/* Mobiles */
+/* Mobiles (480-639px) */
 @media (min-width:480px){
   section{padding:80px 20px}
   .dishes{grid-template-columns:repeat(2,1fr)}
@@ -736,9 +722,10 @@ section{padding:70px 16px;position:relative}
   .gallery-carousel .gallery-item{flex:0 0 calc(50% - 7px)}
   .contact-info-grid{grid-template-columns:repeat(2,1fr)}
   .footer-grid{grid-template-columns:repeat(2,1fr)}
+  .map-wrapper{height:350px}
 }
 
-/* Tablettes */
+/* Tablettes (640-899px) */
 @media (min-width:640px){
   section{padding:90px 28px}
   .news-carousel .news-card{flex:0 0 calc(50% - 10px)}
@@ -748,9 +735,10 @@ section{padding:70px 16px;position:relative}
   .contact-info-grid{grid-template-columns:repeat(2,1fr)}
   .footer-grid{grid-template-columns:repeat(2,1fr)}
   .presentation .stats{gap:16px}
+  .map-wrapper{height:400px}
 }
 
-/* Desktop */
+/* Desktop (900-1199px) */
 @media (min-width:900px){
   :root{--header-h:80px}
   section{padding:100px 40px}
@@ -766,50 +754,56 @@ section{padding:70px 16px;position:relative}
   .footer-grid{grid-template-columns:repeat(4,1fr)}
   .gallery-carousel .gallery-item{flex:0 0 calc(25% - 11px)}
   .map-wrapper{height:450px}
+  .video-wrapper{max-width:960px}
 }
 
-/* Grands écrans */
+/* Grands écrans (1200-1439px) */
 @media (min-width:1200px){
   .container{max-width:1180px}
   .news-carousel .news-card{flex:0 0 calc(33.333% - 14px)}
   .gallery-carousel .gallery-item{flex:0 0 calc(25% - 11px)}
+  .video-wrapper{max-width:1000px}
 }
 
-/* Très grands écrans */
+/* Très grands écrans (≥ 1440px) */
 @media (min-width:1440px){
   .container{max-width:1280px}
+  .video-wrapper{max-width:1080px}
+  .gallery-carousel .gallery-item{flex:0 0 calc(25% - 11px)}
+  section{padding:110px 40px}
 }
 
-/* Orientation paysage sur mobile */
+/* Très très grands écrans (≥ 1920px) */
+@media (min-width:1920px){
+  .container{max-width:1400px}
+  .video-wrapper{max-width:1200px}
+}
+
+/* Orientation paysage mobile */
 @media (max-height:500px) and (orientation:landscape){
   .hero{min-height:auto;padding:100px 20px 60px}
   .hero-logo{width:80px}
   .hero h1{font-size:1.6rem}
   .countdown{display:none}
+  .video-wrapper{max-width:100%}
 }
 
-/* Réduction des animations */
+/* Accessibilité */
 @media (prefers-reduced-motion:reduce){
   *,*::before,*::after{animation-duration:.01ms !important;animation-iteration-count:1 !important;transition-duration:.01ms !important;scroll-behavior:auto !important}
 }
-
-/* ============ OPTIMISATION IMAGES ============ */
-img{background-color:#f2ede2}
-.hero-bg{background-color:#0d3a12}
-img.loaded{animation:imgFadeIn .5s ease}
-@keyframes imgFadeIn{from{opacity:0;transform:scale(.98)}to{opacity:1;transform:scale(1)}}
 </style>
 </head>
 <body>
 
 <!-- ================= HEADER ================= -->
 <header class="header" id="header">
-  <a href="#accueil" class="logo-nav">
-    <img src="logo.png" alt="Logo Espace Festicas Ibelina — Restaurant à Banfora" onerror="this.style.display='none'" width="42" height="42">
+  <a href="#accueil" class="logo-nav" aria-label="Accueil Espace Festicas Ibelina">
+    <img src="logo.png" alt="Logo Espace Festicas Ibelina — Restaurant à Banfora" onerror="this.style.display='none'">
     <span>Festicas Ibelina<small>Banfora</small></span>
   </a>
 
-  <nav class="nav-desktop">
+  <nav class="nav-desktop" aria-label="Navigation principale">
     <a href="#accueil">Accueil</a>
     <a href="#actualites">Actualités</a>
     <a href="#services">Services</a>
@@ -822,13 +816,13 @@ img.loaded{animation:imgFadeIn .5s ease}
     </div>
   </nav>
 
-  <button class="burger" id="burger" aria-label="Menu">
+  <button class="burger" id="burger" aria-label="Ouvrir le menu" aria-expanded="false">
     <span></span><span></span><span></span>
   </button>
 </header>
 
 <!-- ================= MENU MOBILE ================= -->
-<nav class="nav-mobile" id="navMobile">
+<nav class="nav-mobile" id="navMobile" aria-label="Navigation mobile">
   <a href="#accueil">Accueil</a>
   <a href="#actualites">Actualités</a>
   <a href="#services">Services</a>
@@ -847,7 +841,7 @@ img.loaded{animation:imgFadeIn .5s ease}
 <section class="hero" id="accueil">
   <div class="hero-bg" role="img" aria-label="Vue de l'Espace Festicas Ibelina à Banfora"></div>
   <div class="hero-content">
-    <img src="logo.png" alt="Logo Espace Festicas Ibelina" class="hero-logo" onerror="this.style.display='none'" width="170" height="170" fetchpriority="high">
+    <img src="logo.png" alt="Logo Espace Festicas Ibelina" class="hero-logo" onerror="this.style.display='none'" fetchpriority="high">
     <p class="tagline">Restaurant • Événements • Jardin</p>
     <h1>Espace <span class="accent">Festicas</span><br>Ibelina</h1>
     <p class="lead">Un lieu unique à Banfora où la gastronomie, la convivialité et la nature se rencontrent. Venez vivre des moments inoubliables.</p>
@@ -870,22 +864,34 @@ img.loaded{animation:imgFadeIn .5s ease}
   <div class="scroll-indicator">Défiler</div>
 </section>
 
-<!-- ================= VIDÉO ================= -->
+<!-- ================= VIDÉO — LECTEUR HTML5 AMÉLIORÉ ================= -->
 <section class="video-section reveal" id="video">
   <div class="container">
     <div class="section-title reveal">
       <span class="kicker">Vidéo</span>
       <h2>Présentation de l'espace</h2>
       <div class="sep"></div>
+      <p>Découvrez en images l'ambiance unique de l'Espace Festicas Ibelina à Banfora.</p>
     </div>
-    <div class="video-wrapper reveal">
-      <iframe
-        src="presentation.mp4"
-        title="Présentation Espace Festicas Ibelina"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen
-        loading="lazy">
-      </iframe>
+    <div class="video-wrapper reveal" id="videoWrapper">
+      <video
+        id="presentationVideo"
+        preload="metadata"
+        playsinline
+        controls
+        poster="presentation.png"
+        aria-label="Vidéo de présentation de l'Espace Festicas Ibelina">
+        <source src="presentation.mp4" type="video/mp4">
+        Votre navigateur ne supporte pas la lecture vidéo HTML5.
+      </video>
+      <div class="video-overlay" id="videoOverlay" role="button" tabindex="0" aria-label="Lire la vidéo de présentation">
+        <div class="play-btn">
+          <i class="fa-solid fa-play"></i>
+        </div>
+      </div>
+      <div class="video-caption">
+        <i class="fa-solid fa-film"></i> Cliquez pour lancer la vidéo
+      </div>
     </div>
   </div>
 </section>
@@ -903,7 +909,7 @@ img.loaded{animation:imgFadeIn .5s ease}
     <div class="services-grid stagger">
       <div class="service-card">
         <div class="service-image">
-          <img src="images/resto.png" alt="Restaurant de l'Espace Festicas Ibelina à Banfora" loading="lazy" decoding="async" width="800" height="600">
+          <img src="images/resto.png" alt="Restaurant de l'Espace Festicas Ibelina à Banfora" loading="lazy">
           <div class="service-icon-badge"><i class="fa-solid fa-utensils"></i></div>
         </div>
         <div class="service-body">
@@ -913,7 +919,7 @@ img.loaded{animation:imgFadeIn .5s ease}
       </div>
       <div class="service-card">
         <div class="service-image">
-          <img src="images/espace.png" alt="Salle d'événements de l'Espace Festicas Ibelina" loading="lazy" decoding="async" width="800" height="600">
+          <img src="images/espace.png" alt="Salle d'événements de l'Espace Festicas Ibelina" loading="lazy">
           <div class="service-icon-badge"><i class="fa-solid fa-champagne-glasses"></i></div>
         </div>
         <div class="service-body">
@@ -923,7 +929,7 @@ img.loaded{animation:imgFadeIn .5s ease}
       </div>
       <div class="service-card">
         <div class="service-image">
-          <img src="images/detente.png" alt="Jardin de détente de l'Espace Festicas Ibelina" loading="lazy" decoding="async" width="800" height="600">
+          <img src="images/detente.png" alt="Jardin de détente de l'Espace Festicas Ibelina" loading="lazy">
           <div class="service-icon-badge"><i class="fa-solid fa-tree"></i></div>
         </div>
         <div class="service-body">
@@ -947,27 +953,27 @@ img.loaded{animation:imgFadeIn .5s ease}
 
     <div class="dishes stagger">
       <div class="dish" onclick="openMenuPage()">
-        <div class="dish-img"><img src="images/rizsoumbala.png" alt="Riz au soumbala — spécialité burkinabè" loading="lazy" decoding="async"><span class="price-tag">8 000 F</span></div>
+        <div class="dish-img"><img src="images/rizsoumbala.png" alt="Riz au soumbala — spécialité burkinabè" loading="lazy"><span class="price-tag">8 000 F</span></div>
         <div class="dish-info"><h4>Riz gras</h4><p>Riz parfumé, légumes frais et viande tendre</p></div>
       </div>
       <div class="dish" onclick="openMenuPage()">
-        <div class="dish-img"><img src="images/pouletbraise.png" alt="Poulet braisé au feu de bois" loading="lazy" decoding="async"><span class="price-tag">6 000 F</span></div>
+        <div class="dish-img"><img src="images/pouletbraise.png" alt="Poulet braisé au feu de bois" loading="lazy"><span class="price-tag">6 000 F</span></div>
         <div class="dish-info"><h4>Poulet braisé</h4><p>Poulet mariné, grillé au feu de bois</p></div>
       </div>
       <div class="dish" onclick="openMenuPage()">
-        <div class="dish-img"><img src="images/poissoncapi.png" alt="Poisson capitaine grillé" loading="lazy" decoding="async"><span class="price-tag">4 000 F</span></div>
-        <div class="dish-info"><h4>Poisson capitaine</h4><p>Poisson frais grillé, accompagné d'attieké</p></div>
+        <div class="dish-img"><img src="images/poissoncapi.png" alt="Poisson capitaine grillé" loading="lazy"><span class="price-tag">4 000 F</span></div>
+        <div class="dish-info"><h4>Poisson capitaine</h4><p>Poisson frais grillé, accompagné d'attiéké</p></div>
       </div>
       <div class="dish" onclick="openMenuPage()">
-        <div class="dish-img"><img src="images/gombo.png" alt="Sauce gombo traditionnelle" loading="lazy" decoding="async"><span class="price-tag">2 000 F</span></div>
+        <div class="dish-img"><img src="images/gombo.png" alt="Sauce gombo traditionnelle" loading="lazy"><span class="price-tag">2 000 F</span></div>
         <div class="dish-info"><h4>Sauce gombo</h4><p>Sauce traditionnelle avec viande ou poisson</p></div>
       </div>
       <div class="dish" onclick="openMenuPage()">
-        <div class="dish-img"><img src="images/arachid.png" alt="Riz sauce arachide" loading="lazy" decoding="async"><span class="price-tag">2 000 F</span></div>
+        <div class="dish-img"><img src="images/arachid.png" alt="Riz sauce arachide" loading="lazy"><span class="price-tag">2 000 F</span></div>
         <div class="dish-info"><h4>Riz sauce arachide</h4><p>Riz blanc nappé d'une sauce onctueuse</p></div>
       </div>
       <div class="dish" onclick="openMenuPage()">
-        <div class="dish-img"><img src="images/salade.png" alt="Salade Festicas fraîcheur" loading="lazy" decoding="async"><span class="price-tag">3 000 F</span></div>
+        <div class="dish-img"><img src="images/salade.png" alt="Salade Festicas fraîcheur" loading="lazy"><span class="price-tag">3 000 F</span></div>
         <div class="dish-info"><h4>Salade Festicas</h4><p>Mélange frais de saison, vinaigrette maison</p></div>
       </div>
     </div>
@@ -982,7 +988,7 @@ img.loaded{animation:imgFadeIn .5s ease}
 <section class="presentation reveal" id="presentation">
   <div class="container">
     <div class="visual reveal">
-      <img src="presentation.png" alt="Présentation de l'Espace Festicas Ibelina à Banfora" loading="lazy" decoding="async" width="800" height="800">
+      <img src="presentation.png" alt="Présentation de l'Espace Festicas Ibelina à Banfora" loading="lazy">
     </div>
     <div class="text reveal">
       <h2>Bienvenue à l'Espace <span class="accent">Festicas Ibelina</span></h2>
@@ -1008,12 +1014,12 @@ img.loaded{animation:imgFadeIn .5s ease}
     </div>
     <div class="gallery-carousel-wrapper reveal">
       <div class="gallery-carousel" id="galleryCarousel">
-        <div class="gallery-item"><img src="images/img0.png" alt="Espace Festicas Ibelina — vue 1" loading="lazy" decoding="async"></div>
-        <div class="gallery-item"><img src="images/img10.png" alt="Espace Festicas Ibelina — vue 2" loading="lazy" decoding="async"></div>
-        <div class="gallery-item"><img src="images/img2.png" alt="Espace Festicas Ibelina — vue 3" loading="lazy" decoding="async"></div>
-        <div class="gallery-item"><img src="images/img7.png" alt="Espace Festicas Ibelina — vue 4" loading="lazy" decoding="async"></div>
-        <div class="gallery-item"><img src="images/img8.png" alt="Espace Festicas Ibelina — vue 5" loading="lazy" decoding="async"></div>
-        <div class="gallery-item"><img src="images/img6.png" alt="Espace Festicas Ibelina — vue 6" loading="lazy" decoding="async"></div>
+        <div class="gallery-item"><img src="images/img0.png" alt="Espace Festicas Ibelina — vue 1" loading="lazy"></div>
+        <div class="gallery-item"><img src="images/img10.png" alt="Espace Festicas Ibelina — vue 2" loading="lazy"></div>
+        <div class="gallery-item"><img src="images/img2.png" alt="Espace Festicas Ibelina — vue 3" loading="lazy"></div>
+        <div class="gallery-item"><img src="images/img7.png" alt="Espace Festicas Ibelina — vue 4" loading="lazy"></div>
+        <div class="gallery-item"><img src="images/img8.png" alt="Espace Festicas Ibelina — vue 5" loading="lazy"></div>
+        <div class="gallery-item"><img src="images/img6.png" alt="Espace Festicas Ibelina — vue 6" loading="lazy"></div>
       </div>
       <div class="carousel-nav">
         <button id="galleryPrev" aria-label="Précédent"><i class="fa-solid fa-chevron-left"></i></button>
@@ -1038,7 +1044,7 @@ img.loaded{animation:imgFadeIn .5s ease}
       <div class="news-carousel" id="newsCarousel">
         <article class="news-card">
           <div class="thumb">
-            <img src="images/hero.jpg" alt="Ouverture officielle de l'Espace Festicas Ibelina" loading="lazy" decoding="async">
+            <img src="images/hero.jpg" alt="Ouverture officielle de l'Espace Festicas Ibelina" loading="lazy">
             <span class="date-badge"><i class="fa-solid fa-star"></i> 27/09/2026</span>
           </div>
           <div class="body">
@@ -1048,7 +1054,7 @@ img.loaded{animation:imgFadeIn .5s ease}
         </article>
         <article class="news-card">
           <div class="thumb">
-            <img src="images/soiree.png" alt="Soirée Live Music à Banfora" loading="lazy" decoding="async">
+            <img src="images/soiree.png" alt="Soirée Live Music à Banfora" loading="lazy">
             <span class="date-badge"><i class="fa-solid fa-music"></i> Sam. 20h</span>
           </div>
           <div class="body">
@@ -1058,7 +1064,7 @@ img.loaded{animation:imgFadeIn .5s ease}
         </article>
         <article class="news-card">
           <div class="thumb">
-            <img src="images/babenda.png" alt="Menu de saison — Babenda burkinabè" loading="lazy" decoding="async">
+            <img src="images/babenda.png" alt="Menu de saison — Babenda burkinabè" loading="lazy">
             <span class="date-badge"><i class="fa-solid fa-leaf"></i> Nouveau</span>
           </div>
           <div class="body">
@@ -1114,7 +1120,7 @@ img.loaded{animation:imgFadeIn .5s ease}
       <iframe
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3899.123456789!2d-4.788514!3d10.648311!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTDCsDM4JzUzLjkiTiA0wrA0NyczOC43Ilc!5e1!3m2!1sfr!2sbf!4v1234567890"
         loading="lazy"
-        title="Localisation Espace Festicas Ibelina"
+        title="Localisation Espace Festicas Ibelina — Banfora"
         referrerpolicy="no-referrer-when-downgrade">
       </iframe>
     </div>
@@ -1229,7 +1235,7 @@ img.loaded{animation:imgFadeIn .5s ease}
 </footer>
 
 <!-- ================= WHATSAPP FLOTTANT ================= -->
-<a href="https://wa.me/22646778462?text=Bonjour%20Espace%20Festicas%20Ibelina" target="_blank" rel="noopener" class="whatsapp-float" aria-label="WhatsApp">
+<a href="https://wa.me/22646778462?text=Bonjour%20Espace%20Festicas%20Ibelina" target="_blank" rel="noopener" class="whatsapp-float" aria-label="Contacter sur WhatsApp">
   <i class="fa-brands fa-whatsapp"></i>
 </a>
 
@@ -1260,6 +1266,7 @@ function toggleMenu(open){
   burger.classList.toggle('open', open);
   navMobile.classList.toggle('open', open);
   overlay.classList.toggle('show', open);
+  burger.setAttribute('aria-expanded', open ? 'true' : 'false');
   document.body.style.overflow = open ? 'hidden' : '';
 }
 
@@ -1282,32 +1289,65 @@ const revealObserver = new IntersectionObserver((entries) => {
 document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
 
 /* =========================================================
-   5. LAZY LOADING AVANCÉ + FADE IN
+   5. LECTEUR VIDÉO HTML5 AMÉLIORÉ
    ========================================================= */
-if ('IntersectionObserver' in window) {
-  const lazyImages = document.querySelectorAll('img[loading="lazy"]');
-  const imageObserver = new IntersectionObserver((entries, observer) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        const img = entry.target;
-        img.classList.add('loaded');
-        observer.unobserve(img);
-      }
-    });
-  }, { rootMargin: '200px 0px', threshold: 0.01 });
-  lazyImages.forEach(img => imageObserver.observe(img));
-}
+(function initVideoPlayer(){
+  const video = document.getElementById('presentationVideo');
+  const wrapper = document.getElementById('videoWrapper');
+  const overlay = document.getElementById('videoOverlay');
+  if (!video || !wrapper || !overlay) return;
 
-/* Gestion des erreurs d'image */
-document.querySelectorAll('img').forEach(img => {
-  img.addEventListener('error', function() {
-    if (!this.dataset.fallbackTried) {
-      this.dataset.fallbackTried = '1';
-      this.style.background = '#f2ede2';
-      this.style.objectFit = 'contain';
+  function playVideo(){
+    wrapper.classList.add('playing');
+    video.play().catch(err => {
+      console.warn('Lecture vidéo bloquée :', err);
+      // Si autoplay échoue, on laisse les contrôles natifs
+      wrapper.classList.remove('playing');
+    });
+  }
+
+  function pauseVideo(){
+    if (video.paused) {
+      wrapper.classList.remove('playing');
+    }
+  }
+
+  // Clic sur l'overlay → lance la vidéo
+  overlay.addEventListener('click', playVideo);
+
+  // Accessibilité clavier
+  overlay.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      playVideo();
     }
   });
-});
+
+  // Clic sur la vidéo elle-même quand elle est en pause
+  video.addEventListener('click', () => {
+    if (video.paused) playVideo();
+  });
+
+  // Met à jour l'état quand la vidéo joue/pause
+  video.addEventListener('play', () => wrapper.classList.add('playing'));
+  video.addEventListener('pause', () => {
+    if (!video.ended) wrapper.classList.remove('playing');
+  });
+  video.addEventListener('ended', () => {
+    wrapper.classList.remove('playing');
+    video.currentTime = 0;
+  });
+
+  // Gestion des erreurs
+  video.addEventListener('error', () => {
+    overlay.innerHTML = `
+      <div style="text-align:center;color:#fff;padding:20px">
+        <i class="fa-solid fa-triangle-exclamation" style="font-size:3rem;color:#F9A825;margin-bottom:1rem"></i>
+        <p style="font-size:1rem;margin-bottom:.5rem">Vidéo en cours de préparation</p>
+        <p style="font-size:.85rem;opacity:.85">Revenez bientôt pour découvrir la présentation.</p>
+      </div>`;
+  });
+})();
 
 /* =========================================================
    6. COMPTE À REBOURS
